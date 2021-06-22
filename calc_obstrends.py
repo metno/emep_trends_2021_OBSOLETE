@@ -6,6 +6,7 @@ Created on Tue Jun 15 11:16:33 2021
 @author: jonasg
 """
 import os, tqdm
+import numpy as np
 import pandas as pd
 import pyaerocom as pya
 from pyaerocom.trends_helpers import SEASONS
@@ -23,30 +24,38 @@ PERIODS = [(2000,2020, 14),
            (2010,2020, 7),]
 
 EBAS_VARS = ['concso2',
-# =============================================================================
-#              'conco3',
-#              'concso4',
-#              'concoc',
-#             'concCec',
-#             'conctc',
-#             'concss',
-#             'concnh3',
-#             'concnh4',
-#             'concNhno3',
-#             'concNtno3',
-#             'concNtnh',
-#             'concno2',
-#             'concpm10',
-#             'concpm25',
-#             'sc550dryaer',
-#             'ac550aer'
-# =============================================================================
+             'conco3',
+             'concso4',
+             'concoc',
+            'concCec',
+            'conctc',
+            'concss',
+            'concnh3',
+            'concnh4',
+            'concNhno3',
+            'concNtno3',
+            'concNtnh',
+            'concno2',
+            'concpm10',
+            'concpm25',
+            'sc550dryaer',
+            'ac550aer'
             ]
 
 EBAS_BASE_FILTERS = dict(set_flags_nan   = True,
                          data_level      = 2)
 
 OUTPUT_DIR = 'output'
+
+def get_first_last_year(periods):
+    first=2100
+    last=1900
+    for st, end, _ in periods:
+        if st < first:
+            first = st
+        if end > last:
+            last = end
+    return str(first-1), str(last+1)
 
 if __name__ == '__main__':
     if not os.path.exists(OUTPUT_DIR):
@@ -57,6 +66,8 @@ if __name__ == '__main__':
     else:
         # try use lustre...
         data_dir = None
+
+    start_yr, stop_yr = get_first_last_year(PERIODS)
 
     oreader = pya.io.ReadUngridded(EBAS_ID, data_dirs=data_dir)
 
@@ -77,8 +88,16 @@ if __name__ == '__main__':
 
             site = site.resample_time(var, tst,
                                       min_num_obs=DEFAULT_RESAMPLE_CONSTRAINTS,
-                                      resample_how=DEFAULT_RESAMPLE_HOW)
+                                      how=DEFAULT_RESAMPLE_HOW)
+            ts = site[var].loc[start_yr:stop_yr]
+            if len(ts) == 0 or np.isnan(ts).all(): # skip
+                continue
+            subdir = os.path.join(OUTPUT_DIR, f'data_{var}')
+            os.makedirs(subdir, exist_ok=True)
+            fname = f'data_{var}_{site.station_id}_{tst}.csv'
 
+            siteout = os.path.join(subdir, fname)
+            ts.to_csv(siteout)
             sitemeta.append([var,
                              site.station_id,
                              site.station_name,
@@ -89,9 +108,9 @@ if __name__ == '__main__':
                              tst])
 
             te = pya.trends_engine.TrendsEngine
-            te.monthly = site[var]
             resulttab = []
-            ts = site[var]
+
+
             for (start, stop, min_yrs) in PERIODS:
                 for seas in SEASONS:
                     trend = te.compute_trend(ts, tst, start, stop, min_yrs,
