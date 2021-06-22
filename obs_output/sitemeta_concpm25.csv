@@ -1,0 +1,63 @@
+,var,station_id,station_name,latitude,longitude,altitude,unit,freq
+0,concpm25,CY0002R,Agia Marina Xyliatou ; Cyprus Atmospheric Observatory,35.0381,33.0578,523.0,ug m-3,monthly
+1,concpm25,GR0001R,Aliartos,38.366667,23.083333,110.0,ug m-3,monthly
+2,concpm25,GB0048R,Auchencorth Moss,55.79216,-3.2429,260.0,ug m-3,monthly
+3,concpm25,ES0011R,Barcarrota,38.47278,-6.92361,393.0,ug m-3,monthly
+4,concpm25,NL0008R,Bilthoven,52.116667,5.2,5.0,ug m-3,monthly
+5,concpm25,NO0002R;NO0001R,Birkenes II,58.38853,8.252,219.0,ug m-3,monthly
+6,concpm25,SE0005R,Bredkälen,63.85,15.333333,404.0,ug m-3,monthly
+7,concpm25,NL0644R,Cabauw Wielsekade,51.974444,4.923611,3.0,ug m-3,monthly
+8,concpm25,NL0011R,Cabauw Zijdeweg,51.970278,4.926389,1.0,ug m-3,monthly
+9,concpm25,ES0010R,Cabo de Creus,42.31917,3.31583,76.0,ug m-3,monthly
+10,concpm25,ES0009R,Campisabalos,41.27417,-3.1425,1360.0,ug m-3,monthly
+11,concpm25,CH0004R,Chaumont,47.049722,6.979444,1137.0,ug m-3,monthly
+12,concpm25,GB1055R,Chilbolton Observatory,51.149617,-1.438228,78.0,ug m-3,monthly
+13,concpm25,NL0091R,De Zilk,52.3,4.5,6.0,ug m-3,monthly
+14,concpm25,DE0004R,Deuselbach,49.764722,7.051944,480.0,ug m-3,monthly
+15,concpm25,PL0005R,Diabla Gora,54.15,22.066667,159.0,ug m-3,monthly
+16,concpm25,ES0014R,Els Torms,41.39389,0.73472,470.0,ug m-3,monthly
+17,concpm25,HU0003R,Farkasfa,46.91,16.32,315.0,ug m-3,monthly
+18,concpm25,GB0036R,Harwell,51.573056,-1.316667,137.0,ug m-3,monthly
+19,concpm25,NO0056R,Hurdal,60.372386,11.078142,300.0,ug m-3,monthly
+20,concpm25,FI0050R,Hyytiälä,61.85,24.283333,189.0,ug m-3,monthly
+21,concpm25,AT0002R,Illmitz,47.7666664124,16.7666664124,117.0,ug m-3,monthly
+22,concpm25,SI0008R,Iskrba,45.566667,14.866667,525.0,ug m-3,monthly
+23,concpm25,IT0004R,Ispra,45.8,8.633333,215.5,ug m-3,monthly
+24,concpm25,HU0002R,K-puszta,46.966667,19.583333,128.0,ug m-3,monthly
+25,concpm25,NL0009R,Kollumerwaard,53.333889,6.277222,3.0,ug m-3,monthly
+26,concpm25,CZ0003R,Kosetice (NOAK),49.573394,15.080278,535.0,ug m-3,monthly
+27,concpm25,NO0039R,Kårvatn,62.783333,8.883333,210.0,ug m-3,monthly
+28,concpm25,EE0009R,Lahemaa,59.5,25.9,32.0,ug m-3,monthly
+29,concpm25,IT0015U,Lecce (ECO),40.3358,18.1245,36.0,ug m-3,monthly
+30,concpm25,NO0099R,Lista,58.1,6.566667,13.0,ug m-3,monthly
+31,concpm25,IE0031R,Mace Head,53.32583,-9.89944,15.0,ug m-3,monthly
+32,concpm25,ES0006R,Mahón,39.87528,4.31639,78.0,ug m-3,monthly
+33,concpm25,DE0044R,Melpitz,51.53014,12.93386,86.0,ug m-3,monthly
+34,concpm25,IT0019R,Monte Martano,42.805462,12.565645,1090.0,ug m-3,monthly
+35,concpm25,IT0001R,Montelibretti,42.1,12.633333,48.0,ug m-3,monthly
+36,concpm25,ES1778R,Montseny,41.766667,2.35,700.0,ug m-3,monthly
+37,concpm25,DE0007R,Neuglobsow,53.166667,13.033333,63.75,ug m-3,monthly
+38,concpm25,ES0008R,Niembro,43.43917,-4.85,134.0,ug m-3,monthly
+39,concpm25,ES0016R,O Saviñao,42.63472,-7.70472,506.0,ug m-3,monthly
+40,concpm25,FI0036R,Pallas (Matorova),68.0,24.237222222,345.0,ug m-3,monthly
+41,concpm25,CH0002R,Payerne,46.813056,6.944722,489.0,ug m-3,monthly
+42,concpm25,ES0013R,Penausende,41.23889,-5.8975,985.0,ug m-3,monthly
+43,concpm25,HR0002R,Puntijarka,45.9,15.966667,990.0,ug m-3,monthly
+44,concpm25,CH0005R,Rigi,47.0675,8.463889,1031.0,ug m-3,monthly
+45,concpm25,ES0015R,Risco Llamo,39.516667,-4.35,1241.0,ug m-3,monthly
+46,concpm25,LV0010R,Rucava,56.161944,21.173056,21.0,ug m-3,monthly
+47,concpm25,SE0014R,Råö,57.394,11.914,5.0,ug m-3,monthly
+48,concpm25,ES0001R,San Pablo de los Montes,39.54694,-4.35056,917.0,ug m-3,monthly
+49,concpm25,DE0003R,Schauinsland,47.914722,7.908611,1206.75,ug m-3,monthly
+50,concpm25,DE0008R,Schmücke,50.65,10.766667,939.85,ug m-3,monthly
+51,concpm25,FI0009R,Utö,59.779167,21.377222,11.5,ug m-3,monthly
+52,concpm25,SE0011R,Vavihill,56.016667,13.15,175.0,ug m-3,monthly
+53,concpm25,EE0011R,Vilsandi,58.383333,21.816667,6.0,ug m-3,monthly
+54,concpm25,FI0017R,Virolahti II,60.526667,27.686111,4.0,ug m-3,monthly
+55,concpm25,FI0018R,Virolahti III,60.53002,27.66754,9.0,ug m-3,monthly
+56,concpm25,NL0010R,Vredepeel,51.541111,5.853611,30.0,ug m-3,monthly
+57,concpm25,ES0007R,Víznar,37.23722,-3.53417,1230.0,ug m-3,monthly
+58,concpm25,DE0002R,Waldhof,52.802222,10.759444,75.8,ug m-3,monthly
+59,concpm25,ES0012R,Zarra,39.08278,-1.10111,885.0,ug m-3,monthly
+60,concpm25,PL0009R,Zielonka,53.662117,17.934017,123.0,ug m-3,monthly
+61,concpm25,AT0048R,Zoebelboden,47.838611,14.441389,899.0,ug m-3,monthly

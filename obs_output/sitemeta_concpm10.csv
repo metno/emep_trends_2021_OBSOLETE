@@ -1,0 +1,91 @@
+,var,station_id,station_name,latitude,longitude,altitude,unit,freq
+0,concpm10,CY0002R,Agia Marina Xyliatou ; Cyprus Atmospheric Observatory,35.0381,33.0578,523.0,ug m-3,monthly
+1,concpm10,GR0001R,Aliartos,38.366667,23.083333,110.0,ug m-3,monthly
+2,concpm10,KR0100R,Anmyeon-do,36.5383338928,126.330001831,50.0,ug m-3,monthly
+3,concpm10,SE0012R,Aspvreten,58.8,17.383333,20.0,ug m-3,monthly
+4,concpm10,GB0048R,Auchencorth Moss,55.79216,-3.2429,260.0,ug m-3,monthly
+5,concpm10,ES0011R,Barcarrota,38.47278,-6.92361,393.0,ug m-3,monthly
+6,concpm10,CH0053R,Beromünster,47.18961391,8.175433684,797.0,ug m-3,monthly
+7,concpm10,NO0002R;NO0001R,Birkenes II,58.38853,8.252,219.0,ug m-3,monthly
+8,concpm10,DE0005R,Brotjacklriegel,48.819444,13.219167,1016.0,ug m-3,monthly
+9,concpm10,NL0644R,Cabauw Wielsekade,51.974444,4.923611,3.0,ug m-3,monthly
+10,concpm10,ES0010R,Cabo de Creus,42.31917,3.31583,76.0,ug m-3,monthly
+11,concpm10,ES0009R,Campisabalos,41.27417,-3.1425,1360.0,ug m-3,monthly
+12,concpm10,CH0004R,Chaumont,47.049722,6.979444,1137.0,ug m-3,monthly
+13,concpm10,GB1055R,Chilbolton Observatory,51.149617,-1.438228,78.0,ug m-3,monthly
+14,concpm10,CZ0005R,Churanov,49.066667,13.6,1118.0,ug m-3,monthly
+15,concpm10,MY1053R,Danum Valley,4.983333,117.85,432.0,ug m-3,monthly
+16,concpm10,NL0091R,De Zilk,52.3,4.5,6.0,ug m-3,monthly
+17,concpm10,DE0004R,Deuselbach,49.764722,7.051944,480.0,ug m-3,monthly
+18,concpm10,PL0005R,Diabla Gora,54.15,22.066667,159.0,ug m-3,monthly
+19,concpm10,ES0017R,Doñana,37.05194,-6.55528,35.0,ug m-3,monthly
+20,concpm10,NL0007R,Eibergen,52.083333,6.566667,22.0,ug m-3,monthly
+21,concpm10,ES0014R,Els Torms,41.39389,0.73472,470.0,ug m-3,monthly
+22,concpm10,HU0003R,Farkasfa,46.91,16.32,315.0,ug m-3,monthly
+23,concpm10,GR0002R,Finokalia,35.3377990723,25.6693992615,150.0,ug m-3,monthly
+24,concpm10,GB0036R,Harwell,51.573056,-1.316667,137.0,ug m-3,monthly
+25,concpm10,DE0043G,Hohenpeissenberg,47.8014984131,11.009619,990.0,ug m-3,monthly
+26,concpm10,NO0056R,Hurdal,60.372386,11.078142,300.0,ug m-3,monthly
+27,concpm10,FI0050R,Hyytiälä,61.85,24.283333,186.5,ug m-3,monthly
+28,concpm10,AT0002R,Illmitz,47.7666664124,16.7666664124,117.0,ug m-3,monthly
+29,concpm10,SI0008R,Iskrba,45.566667,14.866667,525.0,ug m-3,monthly
+30,concpm10,IT0004R,Ispra,45.8,8.633333,209.0,ug m-3,monthly
+31,concpm10,CH0001G,Jungfraujoch,46.5475,7.985,3578.0,ug m-3,monthly
+32,concpm10,HU0002R,K-puszta,46.966667,19.583333,129.0,ug m-3,monthly
+33,concpm10,RS0005R,Kamenicki vis,43.4,21.95,813.0,ug m-3,monthly
+34,concpm10,NO0098R,Karpdalen,69.656165,30.4217959,70.0,ug m-3,monthly
+35,concpm10,NL0009R,Kollumerwaard,53.333889,6.277222,3.0,ug m-3,monthly
+36,concpm10,CZ0003R,Kosetice (NOAK),49.573394,15.080278,535.0,ug m-3,monthly
+37,concpm10,NO0039R,Kårvatn,62.783333,8.883333,210.0,ug m-3,monthly
+38,concpm10,EE0009R,Lahemaa,59.5,25.9,32.0,ug m-3,monthly
+39,concpm10,IT0016R,Lamezia Terme,38.8763,16.2322,14.0,ug m-3,monthly
+40,concpm10,IT0015U,Lecce (ECO),40.3358,18.1245,36.0,ug m-3,monthly
+41,concpm10,MD0013R,Leova II,46.4884,28.2835,166.0,ug m-3,monthly
+42,concpm10,SK0005R,Liesek,49.366667,19.683333,892.0,ug m-3,monthly
+43,concpm10,GB0006R,Lough Navar,54.443056,-7.87,126.0,ug m-3,monthly
+44,concpm10,IE0031R,Mace Head,53.32583,-9.89944,15.0,ug m-3,monthly
+45,concpm10,ES0006R,Mahón,39.87528,4.31639,78.0,ug m-3,monthly
+46,concpm10,DE0044R,Melpitz,51.53014,12.93386,86.0,ug m-3,monthly
+47,concpm10,IT0019R,Monte Martano,42.805462,12.565645,1090.0,ug m-3,monthly
+48,concpm10,IT0001R,Montelibretti,42.1,12.633333,48.0,ug m-3,monthly
+49,concpm10,ES0022R,Montsec,42.05134,0.72956,1571.0,ug m-3,monthly
+50,concpm10,ES1778R,Montseny,41.766667,2.35,700.0,ug m-3,monthly
+51,concpm10,GB0043R,Narberth,51.781784,-4.691462,160.0,ug m-3,monthly
+52,concpm10,DE0007R,Neuglobsow,53.166667,13.033333,63.75,ug m-3,monthly
+53,concpm10,ES0008R,Niembro,43.43917,-4.85,134.0,ug m-3,monthly
+54,concpm10,ES0005R,Noia,42.72056,-8.92361,683.0,ug m-3,monthly
+55,concpm10,SE0022R,Norunda Stenen,60.0858,17.50528,45.0,ug m-3,monthly
+56,concpm10,ES0016R,O Saviñao,42.63472,-7.70472,506.0,ug m-3,monthly
+57,concpm10,FI0096G,Pallas (Sammaltunturi),67.973333333,24.116111111,570.0,ug m-3,monthly
+58,concpm10,CH0002R,Payerne,46.813056,6.944722,489.0,ug m-3,monthly
+59,concpm10,ES0013R,Penausende,41.23889,-5.8975,985.0,ug m-3,monthly
+60,concpm10,MY1029U,Petalling Jaya,3.1,101.65,87.0,ug m-3,monthly
+61,concpm10,RO0008R,Poiana Stampei,47.324792,25.134664,908.0,ug m-3,monthly
+62,concpm10,HR0002R,Puntijarka,45.9,15.966667,990.0,ug m-3,monthly
+63,concpm10,CH0005R,Rigi,47.0675,8.463889,1031.0,ug m-3,monthly
+64,concpm10,ES0015R,Risco Llamo,39.516667,-4.35,1241.0,ug m-3,monthly
+65,concpm10,LV0010R,Rucava,56.161944,21.173056,21.0,ug m-3,monthly
+66,concpm10,FR0020R,SIRTA Atmospheric Research Observatory,48.7086111111,2.15888888889,168.0,ug m-3,monthly
+67,concpm10,ES0001R,San Pablo de los Montes,39.54694,-4.35056,917.0,ug m-3,monthly
+68,concpm10,DE0003R,Schauinsland,47.914722,7.908611,1206.75,ug m-3,monthly
+69,concpm10,DE0008R,Schmücke,50.65,10.766667,939.85,ug m-3,monthly
+70,concpm10,AT0004R,St. Koloman,47.65,13.2,851.0,ug m-3,monthly
+71,concpm10,SK0006R,Starina,49.05,22.266667,345.0,ug m-3,monthly
+72,concpm10,SK0004R,Stará Lesná,49.15,20.283333,808.0,ug m-3,monthly
+73,concpm10,NO0047R,Svanvik,69.45,30.033333,30.0,ug m-3,monthly
+74,concpm10,CZ0001R,Svratouch,49.735084444,16.034196944,735.0,ug m-3,monthly
+75,concpm10,SK0007R,Topolniky,47.96,17.860556,113.0,ug m-3,monthly
+76,concpm10,NO0058G,Troll,-72.016667,2.533333,1309.0,ug m-3,monthly
+77,concpm10,CH0003R,Tänikon,47.479722,8.904722,539.0,ug m-3,monthly
+78,concpm10,FI0017R,Virolahti II,60.526667,27.686111,4.0,ug m-3,monthly
+79,concpm10,FI0018R,Virolahti III,60.53002,27.66754,9.0,ug m-3,monthly
+80,concpm10,AT0005R,Vorhegg,46.677778,12.972222,1020.0,ug m-3,monthly
+81,concpm10,NL0010R,Vredepeel,51.541111,5.853611,30.0,ug m-3,monthly
+82,concpm10,ES0007R,Víznar,37.23722,-3.53417,1230.0,ug m-3,monthly
+83,concpm10,DE0002R,Waldhof,52.802222,10.759444,75.8,ug m-3,monthly
+84,concpm10,DE0001R,Westerland,54.925556,8.309722,13.75,ug m-3,monthly
+85,concpm10,ES0012R,Zarra,39.08278,-1.10111,885.0,ug m-3,monthly
+86,concpm10,PL0009R,Zielonka,53.662117,17.934017,123.0,ug m-3,monthly
+87,concpm10,DE0009R,Zingst,54.4368,12.7249,2.75,ug m-3,monthly
+88,concpm10,AT0048R,Zoebelboden,47.838611,14.441389,899.0,ug m-3,monthly
+89,concpm10,DE0054R,Zugspitze-Schneefernerhaus,47.4165,10.97964,2671.0,ug m-3,monthly
