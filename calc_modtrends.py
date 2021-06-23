@@ -101,6 +101,14 @@ if __name__ == '__main__':
         tst = 'monthly'
         trendtab =  []
         for site in station_data:
+            try:
+                site = site.resample_time(
+                    var_name=var,
+                    ts_type=tst,
+                    how=DEFAULT_RESAMPLE_HOW)
+            except pya.exceptions.TemporalResolutionError:
+                continue # lower res than monthly
+            
             te = pya.trends_engine.TrendsEngine
             ts = site[var].loc[start_yr:stop_yr]
             
