@@ -11,6 +11,9 @@ import pandas as pd
 import pyaerocom as pya
 from pyaerocom.trends_helpers import SEASONS
 
+from helper_functions import delete_outdated_output, clear_obs_output
+from variables import ALL_EBAS_VARS
+
 EBAS_LOCAL = '/home/jonasg/MyPyaerocom/data/obsdata/EBASMultiColumn/data'
 EBAS_ID = 'EBASMC'
 
@@ -23,25 +26,11 @@ PERIODS = [(2000, 2019, 14),
            (2000, 2010, 7),
            (2010, 2019, 7)]
 
-EBAS_VARS = ['concso4',
-             'concno2',
-             'concpm10',
-             'concpm25',
-# =============================================================================
-#              'concoc',
-#             'concCec',
-#             'conctc',
-#             'concss',
-#             'concnh3',
-#             'concnh4',
-#             'concNhno3',
-#             'concNtno3',
-#             'concNtnh',
-#             ,
-#
-#             'sc550dryaer',
-#             'ac550aer'
-# =============================================================================
+EBAS_VARS = ['vmrno2','vmrno','vmrox','vmrso2','vmrco','vmrc2h6',
+             'vmrc2h4', 'concpm25','concpm10','concso4','concNtno3','concNtnh',
+             'concNnh3','concNnh4','concNhno3','concNno3pm25','concNno3pm10',
+             'concsspm25','concsspm10','concCecpm25','concCocpm25','conchcho',
+             'wetoxs','wetrdn','wetoxn','pr'
             ]
 
 EBAS_BASE_FILTERS = dict(set_flags_nan   = True,
@@ -69,12 +58,20 @@ if __name__ == '__main__':
         # try use lustre...
         data_dir = None
 
+    # clear outdated output variables
+    delete_outdated_output(OUTPUT_DIR, ALL_EBAS_VARS)
+
     start_yr, stop_yr = get_first_last_year(PERIODS)
 
     oreader = pya.io.ReadUngridded(EBAS_ID, data_dirs=data_dir)
 
 
     for var in EBAS_VARS:
+        if not var in ALL_EBAS_VARS:
+            raise ValueError('invalid variable ', var, '. Please register'
+                             'in variables.py')
+        # delete former output for that variable if it exists
+        clear_obs_output(OUTPUT_DIR, var)
         sitemeta = []
         trendtab = []
 
