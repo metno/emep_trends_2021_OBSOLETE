@@ -10,41 +10,58 @@ import numpy as np
 import pandas as pd
 import pyaerocom as pya
 
+from helper_functions import (clear_obs_output, delete_outdated_output,
+                              get_first_last_year)
+
+from variables import ALL_EBAS_VARS
+
 EBAS_LOCAL = '/home/jonasg/MyPyaerocom/data/obsdata/EBASMultiColumn/data'
 EBAS_ID = 'EBASMC'
 
-DEFAULT_RESAMPLE_CONSTRAINTS = dict(yearly     =   dict(daily      = 270),
+# email with Sverre and David on 22 June 2021
+DEFAULT_RESAMPLE_CONSTRAINTS = dict(yearly     =   dict(daily      = 330),
                                     daily       =   dict(hourly     = 18))
 
-RESAMPLE_HOW = dict(daily       =   dict(hourly='max'))
+# daily to yearly will be added below for each percentile
+RESAMPLE_HOW = dict(daily = dict(hourly='max'))
 
+# O3 percentiles for daily -> yearly
 PERECENTILES = [10, 50, 75, 95, 98, 99]
+
 def get_rs_how(percentile):
+    """
+
+
+    Parameters
+    ----------
+    percentile : int
+        integer percentile to be used for daily -> yearly
+
+    Returns
+    -------
+    dict
+        resample_how dictionary
+
+    """
     rs_how = {**RESAMPLE_HOW}
     rs_how['yearly'] = dict(daily=f'{percentile}percentile')
     return rs_how
 
-
+# analysis periods and minimum no. of years required for trends retrieval
 PERIODS = [(2000, 2019, 14),
            (2000, 2010, 7),
            (2010, 2019, 7)]
 
+# variables to be processed in this script
 EBAS_VARS = ['conco3']
 
+# QC filters for EBAS data
 EBAS_BASE_FILTERS = dict(set_flags_nan   = True,
-                         data_level      = 2)
+                         data_level      = 2,
+                         framework       = 'EMEP')
 
+# where results are stored
 OUTPUT_DIR = 'obs_output'
-
-def get_first_last_year(periods):
-    first=2100
-    last=1900
-    for st, end, _ in periods:
-        if st < first:
-            first = st
-        if end > last:
-            last = end
-    return str(first-1), str(last+1)
 
 if __name__ == '__main__':
     if not os.path.exists(OUTPUT_DIR):
@@ -56,12 +73,21 @@ if __name__ == '__main__':
         # try use lustre...
         data_dir = None
 
+    # clear outdated output variables
+    delete_outdated_output(OUTPUT_DIR, ALL_EBAS_VARS)
+
     start_yr, stop_yr = get_first_last_year(PERIODS)
 
     oreader = pya.io.ReadUngridded(EBAS_ID, data_dirs=data_dir)
 
 
     for var in EBAS_VARS:
+        if not var in ALL_EBAS_VARS:
+            raise ValueError('invalid variable ', var, '. Please register'
+                             'in variables.py')
+
+        # delete previous output
+        clear_obs_output(OUTPUT_DIR, var)
         sitemeta = []
         trendtab = []
 

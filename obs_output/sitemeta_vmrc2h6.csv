@@ -1,0 +1,20 @@
+,var,station_id,station_name,latitude,longitude,altitude,unit,freq
+0,vmrc2h6,GB0048R,Auchencorth Moss,55.79216,-3.2429,264.0,nmol mol-1,monthly
+1,vmrc2h6,CH0053R,Beromünster,47.18961391,8.175433684,802.0,nmol mol-1,monthly
+2,vmrc2h6,NO0001R,Birkenes II,58.383333,8.25,190.0,nmol mol-1,monthly
+3,vmrc2h6,DE0005R,Brotjacklriegel,48.819444,13.219167,1016.0,nmol mol-1,monthly
+4,vmrc2h6,GB1055R,Chilbolton Observatory,51.149617,-1.438228,83.0,nmol mol-1,monthly
+5,vmrc2h6,FR0008R,Donon,48.5,7.133333,775.0,nmol mol-1,monthly
+6,vmrc2h6,DE0043G,Hohenpeissenberg,47.8014984131,11.009619,990.0,nmol mol-1,monthly
+7,vmrc2h6,CZ0003R,Kosetice (NOAK),49.573394,15.080278,537.0,nmol mol-1,monthly
+8,vmrc2h6,CZ0099R,Libus,50.15,15.066667,,nmol mol-1,monthly
+9,vmrc2h6,DE0007R,Neuglobsow,53.166667,13.033333,68.2,nmol mol-1,monthly
+10,vmrc2h6,CH0005R,Rigi,47.0675,8.463889,1035.0,nmol mol-1,monthly
+11,vmrc2h6,DE0003R,Schauinsland,47.914722,7.908611,1217.0,nmol mol-1,monthly
+12,vmrc2h6,DE0008R,Schmücke,50.65,10.766667,953.0,nmol mol-1,monthly
+13,vmrc2h6,SK0006R,Starina,49.05,22.266667,345.0,nmol mol-1,monthly
+14,vmrc2h6,FI0009R,Utö,59.779167,21.377222,7.0,nmol mol-1,monthly
+15,vmrc2h6,DE0002R,Waldhof,52.802222,10.759444,81.0,nmol mol-1,monthly
+16,vmrc2h6,NO0042G,Zeppelin mountain (Ny-Ålesund),78.90715,11.88668,484.0,nmol mol-1,monthly
+17,vmrc2h6,DE0009R,Zingst,54.4368,12.7249,9.0,nmol mol-1,monthly
+18,vmrc2h6,DE0054R,Zugspitze-Schneefernerhaus,47.4165,10.97964,2676.0,nmol mol-1,monthly

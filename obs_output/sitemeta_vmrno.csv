@@ -1,0 +1,27 @@
+,var,station_id,station_name,latitude,longitude,altitude,unit,freq
+0,vmrno,KR0100R,Anmyeon-do,36.5383338928,126.330001831,92.0,nmol mol-1,monthly
+1,vmrno,CV0001G,Cape Verde Atmospheric Observatory,16.86403,-24.86752,17.5,nmol mol-1,monthly
+2,vmrno,IT0014R,Capo Granitola,37.571111,12.659722,5.0,nmol mol-1,monthly
+3,vmrno,PL0005R,Diabla Gora,54.15,22.066667,161.35,nmol mol-1,monthly
+4,vmrno,MT0001R,Giordan Lighthouse,36.0722,14.2184,174.0,nmol mol-1,monthly
+5,vmrno,KR0101R,Gosan,33.293917,126.163111,80.5,nmol mol-1,monthly
+6,vmrno,DE0043G,Hohenpeissenberg,47.8014984131,11.009619,985.0,nmol mol-1,monthly
+7,vmrno,BE0013R,Houtem,51.01628,2.58232,6.0,nmol mol-1,monthly
+8,vmrno,FI0050R,Hyytiälä,61.85,24.283333,215.0,nmol mol-1,monthly
+9,vmrno,IT0004R,Ispra,45.8,8.633333,215.5,nmol mol-1,monthly
+10,vmrno,CZ0003R,Kosetice (NOAK),49.573394,15.080278,538.0,nmol mol-1,monthly
+11,vmrno,FR0015R,La Tardière,46.65,-0.75,137.0,nmol mol-1,monthly
+12,vmrno,IT0016R,Lamezia Terme,38.8763,16.2322,14.0,nmol mol-1,monthly
+13,vmrno,IT0015U,Lecce (ECO),40.3358,18.1245,48.0,nmol mol-1,monthly
+14,vmrno,DE0044R,Melpitz,51.53014,12.93386,89.5,nmol mol-1,monthly
+15,vmrno,BE0011R,Moerkerke,51.25457,3.36254,7.0,nmol mol-1,monthly
+16,vmrno,IT0019R,Monte Martano,42.805462,12.565645,1090.0,nmol mol-1,monthly
+17,vmrno,IT0009R,Mt Cimone,44.183333,10.7,2165.0,nmol mol-1,monthly
+18,vmrno,FI0096G,Pallas (Sammaltunturi),67.973333333,24.116111111,570.0,nmol mol-1,monthly
+19,vmrno,FR0013R,Peyrusse Vieille,43.616667,0.183333,204.0,nmol mol-1,monthly
+20,vmrno,FR0030R,Puy de Dôme,45.772223,2.964886,1477.0,nmol mol-1,monthly
+21,vmrno,FR0020R,SIRTA Atmospheric Research Observatory,48.7086111111,2.15888888889,165.0,nmol mol-1,monthly
+22,vmrno,AT0034G,Sonnblick,47.05407,12.95794,3116.0,nmol mol-1,monthly
+23,vmrno,DE0001R,Westerland,54.925556,8.309722,22.5,nmol mol-1,monthly
+24,vmrno,DE0009R,Zingst,54.4368,12.7249,9.0,nmol mol-1,monthly
+25,vmrno,DE0054R,Zugspitze-Schneefernerhaus,47.4165,10.97964,2674.0,nmol mol-1,monthly
