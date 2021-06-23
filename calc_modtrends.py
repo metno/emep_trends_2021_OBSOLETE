@@ -99,6 +99,7 @@ if __name__ == '__main__':
         station_data = concatenated.to_time_series(longitude=longitudes,latitude=latitudes,add_meta=station_metadata)
         
         tst = 'monthly'
+        trendtab =  []
         for site in station_data:
             te = pya.trends_engine.TrendsEngine
             ts = site[var].loc[start_yr:stop_yr]
@@ -110,9 +111,21 @@ if __name__ == '__main__':
             fname = f'data_{var}_{site_id}_{tst}.csv'
 
             siteout = os.path.join(subdir, fname)
-            # ts.to_csv(siteout)
+            ts.to_csv(siteout)
             
-            unit = site.unit
+            unit = str(site.var_info[var]['units'])
+            
+            for (start,stop,min_yrs) in PERIODS:
+                for seas in SEASONS:
+                    trend = te.compute_trend(ts, tst, start, stop, min_yrs,
+                                             seas)
+
+                    row = [var, site_id, trend['period'], trend['season'],
+                           trend[f'slp_{start}'], trend[f'slp_{start}_err'],
+                           trend[f'reg0_{start}'], trend['m'], trend['m_err'],
+                           trend['n'], trend['pval'], unit]
+
+                    trendtab.append(row)                    
 
         
 
