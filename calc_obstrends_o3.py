@@ -20,7 +20,7 @@ EBAS_ID = 'EBASMC'
 
 # email with Sverre and David on 22 June 2021
 DEFAULT_RESAMPLE_CONSTRAINTS = dict(yearly     =   dict(daily      = 330),
-                                    daily       =   dict(hourly     = 18))
+                                    daily      =   dict(hourly     = 18))
 
 # daily to yearly will be added below for each percentile
 RESAMPLE_HOW = dict(daily = dict(hourly='max'))
@@ -57,8 +57,8 @@ EBAS_VARS = ['conco3']
 
 # QC filters for EBAS data
 EBAS_BASE_FILTERS = dict(set_flags_nan   = True,
-                         data_level      = 2,
-                         framework       = 'EMEP')
+                         #data_level      = 2,
+                         framework       = ['EMEP*', 'ACTRIS*'])
 
 # where results are stored
 OUTPUT_DIR = 'obs_output'
@@ -130,7 +130,10 @@ if __name__ == '__main__':
                              site.longitude,
                              site.altitude,
                              unit,
-                             tst])
+                             tst,
+                             site.framework,
+                             site.var_info[var]['matrix']
+                             ])
 
             tst = 'yearly'
             for percentile in PERECENTILES:
@@ -171,7 +174,11 @@ if __name__ == '__main__':
                                        'longitude',
                                        'altitude',
                                        'unit',
-                                       'freq'])
+                                       'freq',
+                                       'framework',
+                                       'matrix'
+
+                                       ])
 
         metaout = os.path.join(OUTPUT_DIR, f'sitemeta_{var}.csv')
 
