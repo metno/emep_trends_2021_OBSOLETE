@@ -10,10 +10,12 @@ import numpy as np
 import pandas as pd
 import pyaerocom as pya
 
+from helper_functions import clear_obs_output
+
 EBAS_LOCAL = '/home/jonasg/MyPyaerocom/data/obsdata/EBASMultiColumn/data'
 EBAS_ID = 'EBASMC'
 
-DEFAULT_RESAMPLE_CONSTRAINTS = dict(yearly     =   dict(daily      = 270),
+DEFAULT_RESAMPLE_CONSTRAINTS = dict(yearly     =   dict(daily      = 330),
                                     daily       =   dict(hourly     = 18))
 
 RESAMPLE_HOW = dict(daily       =   dict(hourly='max'))
@@ -32,7 +34,8 @@ PERIODS = [(2000, 2019, 14),
 EBAS_VARS = ['conco3']
 
 EBAS_BASE_FILTERS = dict(set_flags_nan   = True,
-                         data_level      = 2)
+                         data_level      = 2,
+                         framework       = 'EMEP')
 
 OUTPUT_DIR = 'obs_output'
 
@@ -62,6 +65,9 @@ if __name__ == '__main__':
 
 
     for var in EBAS_VARS:
+
+        # delete previous output
+        clear_obs_output(OUTPUT_DIR, var)
         sitemeta = []
         trendtab = []
 
