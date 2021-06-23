@@ -1,0 +1,12 @@
+,var,station_id,station_name,latitude,longitude,altitude,unit,freq
+0,vmrco,NO0002R,Birkenes II,58.38853,8.252,222.0,nmol mol-1,monthly
+1,vmrco,NL0644R,Cabauw Wielsekade,51.974444,4.923611,3.0,nmol mol-1,monthly
+2,vmrco,CV0001G,Cape Verde Atmospheric Observatory,16.86403,-24.86752,20.0,nmol mol-1,monthly
+3,vmrco,MT0001R,Giordan Lighthouse,36.0722,14.2184,174.0,nmol mol-1,monthly
+4,vmrco,IT0004R,Ispra,45.8,8.633333,215.5,nmol mol-1,monthly
+5,vmrco,CH0001G,Jungfraujoch,46.5475,7.985,3578.0,nmol mol-1,monthly
+6,vmrco,CZ0003R,Kosetice (NOAK),49.573394,15.080278,535.0,nmol mol-1,monthly
+7,vmrco,SI0032R,Krvavec,46.299444,14.538611,1750.0,nmol mol-1,monthly
+8,vmrco,EE0009R,Lahemaa,59.5,25.9,32.0,nmol mol-1,monthly
+9,vmrco,CH0002R,Payerne,46.813056,6.944722,489.0,nmol mol-1,monthly
+10,vmrco,NO0042G,Zeppelin mountain (Ny-Ålesund),78.90715,11.88668,489.0,nmol mol-1,monthly

@@ -9,7 +9,7 @@ import os, shutil, glob
 
 ALL_EBAS_VARS = ['vmrno2',
                  'vmrno',
-                 'vmrox',
+                 #'vmrox',
                  'vmrso2',
                  'vmrco',
                  'vmrc2h6',

@@ -28,3 +28,13 @@ def clear_obs_output(outdir, var):
     if os.path.exists(datadir):
         shutil.rmtree(datadir)
 
+def get_first_last_year(periods):
+    first=2100
+    last=1900
+    for st, end, _ in periods:
+        if st < first:
+            first = st
+        if end > last:
+            last = end
+    return str(first-1), str(last+1)
+

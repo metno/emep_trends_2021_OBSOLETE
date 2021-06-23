@@ -10,7 +10,9 @@ import numpy as np
 import pandas as pd
 import pyaerocom as pya
 
-from helper_functions import clear_obs_output, delete_outdated_output
+from helper_functions import (clear_obs_output, delete_outdated_output,
+                              get_first_last_year)
+
 from variables import ALL_EBAS_VARS
 
 EBAS_LOCAL = '/home/jonasg/MyPyaerocom/data/obsdata/EBASMultiColumn/data'
@@ -53,21 +55,13 @@ PERIODS = [(2000, 2019, 14),
 # variables to be processed in this script
 EBAS_VARS = ['conco3']
 
+# QC filters for EBAS data
 EBAS_BASE_FILTERS = dict(set_flags_nan   = True,
                          data_level      = 2,
                          framework       = 'EMEP')
 
+# where results are stored
 OUTPUT_DIR = 'obs_output'
-
-def get_first_last_year(periods):
-    first=2100
-    last=1900
-    for st, end, _ in periods:
-        if st < first:
-            first = st
-        if end > last:
-            last = end
-    return str(first-1), str(last+1)
 
 if __name__ == '__main__':
     if not os.path.exists(OUTPUT_DIR):
