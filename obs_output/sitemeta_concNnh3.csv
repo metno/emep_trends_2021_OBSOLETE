@@ -1,101 +1,55 @@
-,var,station_id,station_name,latitude,longitude,altitude,unit,freq
-0,concNnh3,GE0001R,Abastumani,41.755053,42.825333,1650.0,ug N m-3,monthly
-1,concNnh3,AM0001R,Amberd,40.38444444,44.260583333,2080.0,ug N m-3,monthly
-2,concNnh3,NO0090R,Andøya,69.278333,16.011666,380.0,ug N m-3,monthly
-3,concNnh3,DK0008R,Anholt,56.716667,11.516667,43.0,ug N m-3,monthly
-4,concNnh3,SE0012R,Aspvreten,58.8,17.383333,20.0,ug N m-3,monthly
-5,concNnh3,GB0048R,Auchencorth Moss,55.79216,-3.2429,260.0,ug N m-3,monthly
-6,concNnh3,TH1042U,Bangkok,13.766667,100.533333,2.0,ug N m-3,monthly
-7,concNnh3,JP1024U,Banryu,34.683333,131.8,53.0,ug N m-3,monthly
-8,concNnh3,ES0011R,Barcarrota,38.47278,-6.92361,393.0,ug N m-3,monthly
-9,concNnh3,CH0053R,Beromünster,47.18961391,8.175433684,797.0,ug N m-3,monthly
-10,concNnh3,NO0002R;NO0001R,Birkenes II,58.38853,8.252,219.0,ug N m-3,monthly
-11,concNnh3,SE0005R,Bredkälen,63.85,15.333333,404.0,ug N m-3,monthly
-12,concNnh3,ES0009R,Campisabalos,41.27417,-3.1425,1360.0,ug N m-3,monthly
-13,concNnh3,GB1055R,Chilbolton Observatory,51.149617,-1.438228,78.0,ug N m-3,monthly
-14,concNnh3,TR0001R,Cubuk II,40.5,33.0,1169.0,ug N m-3,monthly
-15,concNnh3,NL0091R,De Zilk,52.3,4.5,6.0,ug N m-3,monthly
-16,concNnh3,PL0005R,Diabla Gora,54.15,22.066667,159.45,ug N m-3,monthly
-17,concNnh3,NL0007R,Eibergen,52.083333,6.566667,22.0,ug N m-3,monthly
-18,concNnh3,ES0014R,Els Torms,41.39389,0.73472,470.0,ug N m-3,monthly
-19,concNnh3,HU0003R,Farkasfa,46.91,16.32,314.0,ug N m-3,monthly
-20,concNnh3,GB0054R,Glen Saugh,56.907222,-2.559167,85.0,ug N m-3,monthly
-21,concNnh3,SE0020R,Hallahus,56.0429,13.148,190.0,ug N m-3,monthly
-22,concNnh3,VN1047U,Hanoi,21.016667,105.85,5.0,ug N m-3,monthly
-23,concNnh3,JP1021R,Happo,36.7,137.8,1850.0,ug N m-3,monthly
-24,concNnh3,JP1027R,Hedo,26.866667,128.25,60.0,ug N m-3,monthly
-25,concNnh3,GB0014R,High Muffles,54.334444,-0.8075,267.0,ug N m-3,monthly
-26,concNnh3,VN1048R,Hoa Binh,20.816667,105.333333,23.0,ug N m-3,monthly
-27,concNnh3,NO0056R,Hurdal,60.372386,11.078142,300.0,ug N m-3,monthly
-28,concNnh3,FI0050R,Hyytiälä,61.85,24.283333,184.0,ug N m-3,monthly
-29,concNnh3,JP1022R,Ijira,35.566667,136.683333,140.0,ug N m-3,monthly
-30,concNnh3,AT0002R,Illmitz,47.7666664124,16.7666664124,117.0,ug N m-3,monthly
-31,concNnh3,RU1040U,Irkutsk,52.233333,104.25,400.0,ug N m-3,monthly
-32,concNnh3,SI0008R,Iskrba,45.566667,14.866667,525.0,ug N m-3,monthly
-33,concNnh3,HU0002R,K-puszta,46.966667,19.583333,128.0,ug N m-3,monthly
-34,concNnh3,NO0055R,Karasjok,69.466667,25.216667,333.0,ug N m-3,monthly
-35,concNnh3,DK0005R,Keldsnor,54.746495,10.73616,10.0,ug N m-3,monthly
-36,concNnh3,BE0014R,Koksijde,51.12092,2.65854,7.0,ug N m-3,monthly
-37,concNnh3,CZ0003R,Kosetice (NOAK),49.573394,15.080278,535.0,ug N m-3,monthly
-38,concNnh3,NO0039R,Kårvatn,62.783333,8.883333,210.0,ug N m-3,monthly
-39,concNnh3,MD0013R,Leova II,46.4884,28.2835,166.0,ug N m-3,monthly
-40,concNnh3,RU1039R,Listvyanka,51.85,104.9,700.0,ug N m-3,monthly
-41,concNnh3,PH1034R,Los Banos,14.183333,121.25,35.0,ug N m-3,monthly
-42,concNnh3,GB0006R,Lough Navar,54.443056,-7.87,126.0,ug N m-3,monthly
-43,concNnh3,TH1046R,Mae Hia - Chiang Mai,18.766667,98.933333,350.0,ug N m-3,monthly
-44,concNnh3,PH1033U,Metro Manila,14.633333,121.066667,54.0,ug N m-3,monthly
-45,concNnh3,RU1038R,Mondy,51.666667,101.0,2000.0,ug N m-3,monthly
-46,concNnh3,IT0001R,Montelibretti,42.1,12.633333,48.0,ug N m-3,monthly
-47,concNnh3,DE0007R,Neuglobsow,53.166667,13.033333,64.0,ug N m-3,monthly
-48,concNnh3,ES0008R,Niembro,43.43917,-4.85,134.0,ug N m-3,monthly
-49,concNnh3,SE0022R,Norunda Stenen,60.0858,17.50528,45.0,ug N m-3,monthly
-50,concNnh3,NO1665R,Ny-Ålesund - Nordpolhotellet,78.92472,11.92643,8.0,ug N m-3,monthly
-51,concNnh3,NO1154R,Ny-Ålesund - Transformatorbua,78.92501,11.92659,8.0,ug N m-3,monthly
-52,concNnh3,JP1018R,Ogasawara,27.083333,142.216667,230.0,ug N m-3,monthly
-53,concNnh3,JP1023R,Oki,36.283333,133.183333,90.0,ug N m-3,monthly
-54,concNnh3,NO0041R,Osen,61.25,11.783333,440.0,ug N m-3,monthly
-55,concNnh3,FI0022R,Oulanka,66.320278,29.401667,310.0,ug N m-3,monthly
-56,concNnh3,FI0036R,Pallas (Matorova),68.0,24.237222222,340.0,ug N m-3,monthly
-57,concNnh3,TH1044R,Patumthani,14.033333,100.766667,2.0,ug N m-3,monthly
-58,concNnh3,CH0002R,Payerne,46.813056,6.944722,489.0,ug N m-3,monthly
-59,concNnh3,MY1029U,Petalling Jaya,3.1,101.65,87.0,ug N m-3,monthly
-60,concNnh3,NO0043R,Prestebakke,59.0,11.533333,160.0,ug N m-3,monthly
-61,concNnh3,RU1041R,Primorskaya,43.7,132.116667,84.0,ug N m-3,monthly
-62,concNnh3,CH0005R,Rigi,47.0675,8.463889,1031.0,ug N m-3,monthly
-63,concNnh3,JP1016R,Rishiri,45.116667,141.2,40.0,ug N m-3,monthly
-64,concNnh3,DK0012R,Risoe,55.693588,12.085797,6.0,ug N m-3,monthly
-65,concNnh3,LV0010R,Rucava,56.161944,21.173056,19.8,ug N m-3,monthly
-66,concNnh3,SE0014R,Råö,57.394,11.914,5.0,ug N m-3,monthly
-67,concNnh3,SE0002R,Rörvik,57.416667,11.933333,10.0,ug N m-3,monthly
-68,concNnh3,JP1019R,Sado-seki,38.233333,138.4,136.0,ug N m-3,monthly
-69,concNnh3,ES0001R,San Pablo de los Montes,39.54694,-4.35056,917.0,ug N m-3,monthly
-70,concNnh3,DE0003R,Schauinsland,47.914722,7.908611,1207.0,ug N m-3,monthly
-71,concNnh3,DE0008R,Schmücke,50.65,10.766667,939.0,ug N m-3,monthly
-72,concNnh3,ID1014R,Serpong,-6.25,106.566667,46.0,ug N m-3,monthly
-73,concNnh3,NO0008R,Skreådalen,58.816667,6.716667,475.0,ug N m-3,monthly
-74,concNnh3,SK0006R,Starina,49.05,22.266667,345.0,ug N m-3,monthly
-75,concNnh3,SK0004R,Stará Lesná,49.15,20.283333,808.0,ug N m-3,monthly
-76,concNnh3,NO0047R,Svanvik,69.45,30.033333,30.0,ug N m-3,monthly
-77,concNnh3,CZ0001R,Svratouch,49.735084444,16.034196944,735.0,ug N m-3,monthly
-78,concNnh3,MY1030R,Tanah Rata,4.466667,101.383333,1470.0,ug N m-3,monthly
-79,concNnh3,DK0003R,Tange,56.35,9.6,16.0,ug N m-3,monthly
-80,concNnh3,JP1017R,Tappi,41.25,140.35,105.0,ug N m-3,monthly
-81,concNnh3,MN1032R,Terelj,47.983333,107.483333,1540.0,ug N m-3,monthly
-82,concNnh3,NO0058G,Troll,-72.016667,2.533333,1309.0,ug N m-3,monthly
-83,concNnh3,NO0015R,Tustervatn,65.833333,13.916667,439.0,ug N m-3,monthly
-84,concNnh3,MN1031U,Ulaanbaatar,47.9,106.816667,1282.0,ug N m-3,monthly
-85,concNnh3,DK0031R,Ulborg,56.290424,8.427486,40.0,ug N m-3,monthly
-86,concNnh3,FI0009R,Utö,59.779167,21.377222,7.0,ug N m-3,monthly
-87,concNnh3,TH1045R,Vachiralongkorn Dam - Khanchanaburi,14.766667,98.583333,170.0,ug N m-3,monthly
-88,concNnh3,SE0011R,Vavihill,56.016667,13.15,175.0,ug N m-3,monthly
-89,concNnh3,DK0010G,"Villum Research Station, Station Nord",81.6,-16.67,23.0,ug N m-3,monthly
-90,concNnh3,FI0017R,Virolahti II,60.526667,27.686111,4.0,ug N m-3,monthly
-91,concNnh3,FI0018R,Virolahti III,60.53002,27.66754,7.0,ug N m-3,monthly
-92,concNnh3,ES0007R,Víznar,37.23722,-3.53417,1230.0,ug N m-3,monthly
-93,concNnh3,DE0002R,Waldhof,52.802222,10.759444,76.0,ug N m-3,monthly
-94,concNnh3,DE0001R,Westerland,54.925556,8.309722,14.0,ug N m-3,monthly
-95,concNnh3,GB0013R,Yarner Wood,50.596389,-3.713056,119.0,ug N m-3,monthly
-96,concNnh3,JP1025R,Yusuhara,33.366667,132.933333,790.0,ug N m-3,monthly
-97,concNnh3,NO0042G,Zeppelin mountain (Ny-Ålesund),78.90715,11.88668,474.0,ug N m-3,monthly
-98,concNnh3,DE0009R,Zingst,54.4368,12.7249,3.0,ug N m-3,monthly
-99,concNnh3,FI0037R,Ähtäri II,62.583333,24.183333,180.0,ug N m-3,monthly
+,var,station_id,station_name,latitude,longitude,altitude,unit,freq,framework,matrix
+0,concNnh3,GE0001R,Abastumani,41.755053,42.825333,1650.0,ug N m-3,monthly,EMEP,air
+1,concNnh3,AM0001R,Amberd,40.38444444,44.260583333,2080.0,ug N m-3,monthly,EMEP,air
+2,concNnh3,DK0008R,Anholt,56.716667,11.516667,40.0,ug N m-3,monthly,EMEP,air
+3,concNnh3,SE0012R,Aspvreten,58.8,17.383333,20.0,ug N m-3,monthly,EMEP HELCOM,air
+4,concNnh3,GB0048R,Auchencorth Moss,55.79216,-3.2429,260.0,ug N m-3,monthly,EMEP;EMEP CAMP,air
+5,concNnh3,ES0011R,Barcarrota,38.47278,-6.92361,393.0,ug N m-3,monthly,EMEP,air
+6,concNnh3,CH0053R,Beromünster,47.18961391,8.175433684,797.0,ug N m-3,monthly,EMEP,air
+7,concNnh3,ES0009R,Campisabalos,41.27417,-3.1425,1360.0,ug N m-3,monthly,EMEP,air
+8,concNnh3,GB1055R,Chilbolton Observatory,51.149617,-1.438228,78.0,ug N m-3,monthly,EMEP,air
+9,concNnh3,TR0001R,Cubuk II,40.5,33.0,1169.0,ug N m-3,monthly,EMEP,air
+10,concNnh3,NL0091R,De Zilk,52.3,4.5,6.0,ug N m-3,monthly,EMEP CAMP,air
+11,concNnh3,PL0005R,Diabla Gora,54.15,22.066667,159.45,ug N m-3,monthly,EMEP,air
+12,concNnh3,NL0007R,Eibergen,52.083333,6.566667,20.0,ug N m-3,monthly,EMEP,air
+13,concNnh3,ES0014R,Els Torms,41.39389,0.73472,470.0,ug N m-3,monthly,EMEP,air
+14,concNnh3,HU0003R,Farkasfa,46.91,16.32,314.0,ug N m-3,monthly,EMEP,air
+15,concNnh3,SE0020R,Hallahus,56.0429,13.148,190.0,ug N m-3,monthly,EMEP HELCOM,air
+16,concNnh3,GB0036R,Harwell,51.573056,-1.316667,137.0,ug N m-3,monthly,EMEP;EMEP CAMP,air
+17,concNnh3,NO0056R,Hurdal,60.372386,11.078142,300.0,ug N m-3,monthly,EMEP NILU,air
+18,concNnh3,FI0050R,Hyytiälä,61.85,24.283333,184.0,ug N m-3,monthly,EMEP,air
+19,concNnh3,AT0002R,Illmitz,47.7666664124,16.7666664124,117.0,ug N m-3,monthly,EMEP,air
+20,concNnh3,SI0008R,Iskrba,45.566667,14.866667,525.0,ug N m-3,monthly,EMEP,air
+21,concNnh3,HU0002R,K-puszta,46.966667,19.583333,128.0,ug N m-3,monthly,EMEP,air
+22,concNnh3,DK0005R,Keldsnor,54.746495,10.73616,10.0,ug N m-3,monthly,EMEP,air
+23,concNnh3,CZ0003R,Kosetice (NOAK),49.573394,15.080278,535.0,ug N m-3,monthly,EMEP;EMEP sel_GEOmon2.1,air
+24,concNnh3,MD0013R,Leova II,46.4884,28.2835,166.0,ug N m-3,monthly,EMEP,air
+25,concNnh3,IT0001R,Montelibretti,42.1,12.633333,48.0,ug N m-3,monthly,EMEP,air
+26,concNnh3,DE0007R,Neuglobsow,53.166667,13.033333,64.0,ug N m-3,monthly,EMEP,air
+27,concNnh3,SE0022R,Norunda Stenen,60.0858,17.50528,45.0,ug N m-3,monthly,EMEP HELCOM,air
+28,concNnh3,NO0041R,Osen,61.25,11.783333,440.0,ug N m-3,monthly,EMEP NILU,air
+29,concNnh3,FI0022R,Oulanka,66.320278,29.401667,310.0,ug N m-3,monthly,EMEP,air
+30,concNnh3,FI0036R,Pallas (Matorova),68.0,24.237222222,340.0,ug N m-3,monthly,EMEP,air
+31,concNnh3,CH0002R,Payerne,46.813056,6.944722,489.0,ug N m-3,monthly,EMEP,air
+32,concNnh3,CH0005R,Rigi,47.0675,8.463889,1031.0,ug N m-3,monthly,EMEP,air
+33,concNnh3,DK0012R,Risoe,55.693588,12.085797,3.0,ug N m-3,monthly,EMEP,air
+34,concNnh3,LV0010R,Rucava,56.161944,21.173056,19.8,ug N m-3,monthly,EMEP GAW-WDCA;EMEP HELCOM,air
+35,concNnh3,ES0001R,San Pablo de los Montes,39.54694,-4.35056,917.0,ug N m-3,monthly,EMEP,air
+36,concNnh3,DE0003R,Schauinsland,47.914722,7.908611,1207.0,ug N m-3,monthly,EMEP,air
+37,concNnh3,DE0008R,Schmücke,50.65,10.766667,939.0,ug N m-3,monthly,EMEP,air
+38,concNnh3,NO0008R,Skreådalen,58.816667,6.716667,475.0,ug N m-3,monthly,EMEP NILU,air
+39,concNnh3,SK0006R,Starina,49.05,22.266667,345.0,ug N m-3,monthly,EMEP,air
+40,concNnh3,SK0004R,Stará Lesná,49.15,20.283333,808.0,ug N m-3,monthly,EMEP,air
+41,concNnh3,CZ0001R,Svratouch,49.735084444,16.034196944,735.0,ug N m-3,monthly,EMEP,air
+42,concNnh3,DK0003R,Tange,56.35,9.6,13.0,ug N m-3,monthly,EMEP,air
+43,concNnh3,NO0015R,Tustervatn,65.833333,13.916667,439.0,ug N m-3,monthly,EMEP NILU,air
+44,concNnh3,DK0031R,Ulborg,56.290424,8.427486,10.0,ug N m-3,monthly,EMEP,air
+45,concNnh3,FI0009R,Utö,59.779167,21.377222,7.0,ug N m-3,monthly,EMEP;EMEP_preliminary HELCOM,air
+46,concNnh3,SE0011R,Vavihill,56.016667,13.15,175.0,ug N m-3,monthly,EMEP HELCOM,air
+47,concNnh3,FI0017R,Virolahti II,60.526667,27.686111,4.0,ug N m-3,monthly,EMEP,air
+48,concNnh3,FI0018R,Virolahti III,60.53002,27.66754,7.0,ug N m-3,monthly,EMEP_preliminary HELCOM,air
+49,concNnh3,ES0007R,Víznar,37.23722,-3.53417,1230.0,ug N m-3,monthly,EMEP,air
+50,concNnh3,DE0002R,Waldhof,52.802222,10.759444,76.0,ug N m-3,monthly,EMEP,air
+51,concNnh3,DE0001R,Westerland,54.925556,8.309722,12.0,ug N m-3,monthly,EMEP,air
+52,concNnh3,DE0009R,Zingst,54.4368,12.7249,3.0,ug N m-3,monthly,EMEP HELCOM,air
+53,concNnh3,FI0037R,Ähtäri II,62.583333,24.183333,180.0,ug N m-3,monthly,EMEP,air

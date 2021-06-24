@@ -1,15 +1,13 @@
-,var,station_id,station_name,latitude,longitude,altitude,unit,freq
-0,concCecpm25,NO0002R;NO0001R,Birkenes II,58.38853,8.252,223.0,ug C m-3,monthly
-1,concCecpm25,PL0005R,Diabla Gora,54.15,22.066667,159.0,ug C m-3,monthly
-2,concCecpm25,NO0056R,Hurdal,60.372386,11.078142,304.0,ug C m-3,monthly
-3,concCecpm25,IT0004R,Ispra,45.8,8.633333,215.5,ug C m-3,monthly
-4,concCecpm25,CZ0003R,Kosetice (NOAK),49.573394,15.080278,539.0,ug C m-3,monthly
-5,concCecpm25,NO0039R,Kårvatn,62.783333,8.883333,210.0,ug C m-3,monthly
-6,concCecpm25,DE0044R,Melpitz,51.53014,12.93386,90.0,ug C m-3,monthly
-7,concCecpm25,IT0001R,Montelibretti,42.1,12.633333,48.0,ug C m-3,monthly
-8,concCecpm25,ES1778R,Montseny,41.766667,2.35,704.0,ug C m-3,monthly
-9,concCecpm25,CH0002R,Payerne,46.813056,6.944722,494.2,ug C m-3,monthly
-10,concCecpm25,FR0030R,Puy de Dôme,45.772223,2.964886,1465.0,ug C m-3,monthly
-11,concCecpm25,FR0020R,SIRTA Atmospheric Research Observatory,48.7086111111,2.15888888889,164.5,ug C m-3,monthly
-12,concCecpm25,CA0106U,Toronto,43.7833328247,-79.4666671753,202.0,ug C m-3,monthly
-13,concCecpm25,DE0002R,Waldhof,52.802222,10.759444,75.6,ug C m-3,monthly
+,var,station_id,station_name,latitude,longitude,altitude,unit,freq,framework,matrix
+0,concCecpm25,NO0002R;NO0001R,Birkenes II,58.38853,8.252,223.0,ug C m-3,monthly,ACTRIS EMEP GAW-WDCA;ACTRIS EMEP GAW-WDCA NILU;EMEP NILU;EMEP EUSAAR GAW-WDCA NILU,pm25
+1,concCecpm25,PL0005R,Diabla Gora,54.15,22.066667,159.0,ug C m-3,monthly,EMEP,pm25
+2,concCecpm25,NO0056R,Hurdal,60.372386,11.078142,304.0,ug C m-3,monthly,ACTRIS EMEP GAW-WDCA;ACTRIS EMEP NILU GAW-WDCA,pm25
+3,concCecpm25,IT0004R,Ispra,45.8,8.633333,215.5,ug C m-3,monthly,ACTRIS EMEP GAW-WDCA;EMEP EUSAAR GAW-WDCA,pm25
+4,concCecpm25,CZ0003R,Kosetice (NOAK),49.573394,15.080278,539.0,ug C m-3,monthly,ACTRIS EMEP GAW-WDCA;ACTRIS EMEP EUSAAR GAW-WDCA,pm25
+5,concCecpm25,NO0039R,Kårvatn,62.783333,8.883333,210.0,ug C m-3,monthly,ACTRIS EMEP GAW-WDCA;ACTRIS EMEP NILU GAW-WDCA,pm25
+6,concCecpm25,DE0044R,Melpitz,51.53014,12.93386,90.0,ug C m-3,monthly,ACTRIS EMEP;ACTRIS EMEP GAW-WDCA,pm25
+7,concCecpm25,ES1778R,Montseny,41.766667,2.35,704.0,ug C m-3,monthly,ACTRIS EMEP GAW-WDCA;EMEP EUSAAR GAW-WDCA,pm25
+8,concCecpm25,CH0002R,Payerne,46.813056,6.944722,494.2,ug C m-3,monthly,EMEP;EMEP ACTRIS,pm25
+9,concCecpm25,FR0030R,Puy de Dôme,45.772223,2.964886,1465.0,ug C m-3,monthly,ACTRIS EMEP GAW-WDCA;EMEP EUSAAR GAW-WDCA;ACTRIS EMEP EUSAAR GAW-WDCA,pm25
+10,concCecpm25,FR0020R,SIRTA Atmospheric Research Observatory,48.7086111111,2.15888888889,164.5,ug C m-3,monthly,ACTRIS EMEP GAW-WDCA,pm25
+11,concCecpm25,DE0002R,Waldhof,52.802222,10.759444,75.6,ug C m-3,monthly,EMEP,pm25

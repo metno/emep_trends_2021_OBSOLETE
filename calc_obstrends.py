@@ -58,7 +58,8 @@ EBAS_VARS = [
             'pr'
             ]
 EBAS_BASE_FILTERS = dict(set_flags_nan   = True,
-                         data_level      = 2)
+                         #data_level      = 2
+                           framework       = ['EMEP*', 'ACTRIS*'])
 
 OUTPUT_DIR = 'obs_output'
 
@@ -126,7 +127,10 @@ if __name__ == '__main__':
                              site.longitude,
                              site.altitude,
                              unit,
-                             tst])
+                             tst,
+                             site.framework,
+                             site.var_info[var]['matrix']
+                             ])
 
             te = pya.trends_engine.TrendsEngine
 
@@ -151,7 +155,10 @@ if __name__ == '__main__':
                                        'longitude',
                                        'altitude',
                                        'unit',
-                                       'freq'])
+                                       'freq',
+                                       'framework',
+                                       'matrix'
+                                       ])
 
         metaout = os.path.join(OUTPUT_DIR, f'sitemeta_{var}.csv')
 
