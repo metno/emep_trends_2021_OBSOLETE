@@ -5,7 +5,7 @@ Created on Wed Jun 23 09:32:56 2021
 
 @author: hansb
 """
-import os, tqdm
+import os, socket, tqdm
 import numpy as np
 import pandas as pd
 import iris
@@ -34,45 +34,55 @@ def get_first_last_year(periods):
 
 start_yr, stop_yr = get_first_last_year(PERIODS)
 
-preface = '/home/hansb'
+HOSTNAME = socket.gethostname()
+
+if HOSTNAME == 'pc5302':
+    preface = '/home/hansb'
+else:
+    preface = '/'
+    
 PATHS = {
-    '1999-2017' : f'{preface}/lustre/storeB/project/fou/kl/emep/ModelRuns/2019_REPORTING/TRENDS/',
+    '1999-2016' : f'{preface}/lustre/storeB/project/fou/kl/emep/ModelRuns/2019_REPORTING/TRENDS/',
+    '2017'      : f'{preface}/lustre/storeB/project/fou/kl/emep/ModelRuns/2019_REPORTING/EMEP01_L20EC_rv4_33.2017',
     '2018'      : f'{preface}/lustre/storeB/project/fou/kl/emep/ModelRuns/2020_REPORTING/EMEP01_rv4_35_2018_emepCRef2',
     '2019'      : f'{preface}/lustre/storeB/project/fou/kl/emep/ModelRuns/2020_REPORTING/EMEP01_rv4_35_2019_tnoCRef2'    
     }
 # path = f'{preface}lustre/storeB/project/fou/kl/emep/ModelRuns/2019_REPORTING/TRENDS/'
-# years = range(2017,2020)
-years = [2016,2018]
+years = range(2011,2020)
+# years = [2016,2017,2018]
 
-var_info = {'concpm10':{'units':'ug m-3'},
-            'concpm25':{'units':'ug m-3'},
-            'concno2':{'units':'ug m-3'},
-            'concso4':{'units':'ug m-3'},
+var_info = {'concpm10':{'units':'ug m-3','data_freq':'day'},
+            'concpm25':{'units':'ug m-3','data_freq':'day'},
+            'concno2':{'units':'ug m-3','data_freq':'day'},
+            'concso4':{'units':'ug m-3','data_freq':'day'},
             }
 
 EMEP_VARS = [
              'concpm10',
-             'concpm25',
-             'concno2',
-             'concso4',
+             # 'concpm25',
+             # 'concno2',
+             # 'concso4',
              ]
 
 if __name__ == '__main__':
 
     for var in EMEP_VARS:
         site_info = pd.read_csv(f'obs_output/sitemeta_{var}.csv',index_col=0)
-    
+        data_freq =  var_info[var]['data_freq']
         data = []
         for year in years:
-            if year < 2018:
-                path = PATHS['1999-2017']
-                data_id = f'{path}/{year}/Base_day.nc'
+            if year < 2017:
+                path = PATHS['1999-2016']
+                data_id = f'{path}/{year}/Base_{data_freq}.nc'
+            elif year == 2017:
+                path = PATHS['2017']
+                data_id = f'{path}/Base_{data_freq}.nc'
             elif year == 2018:
                 path = PATHS['2018']
-                data_id = f'{path}/Base_day.nc'
+                data_id = f'{path}/Base_{data_freq}.nc'
             elif year == 2019:
                 path = PATHS['2019']
-                data_id = f'{path}/Base_day.nc'
+                data_id = f'{path}/Base_{data_freq}.nc'
             else:
                 raise ValueError
         
@@ -97,6 +107,8 @@ if __name__ == '__main__':
                             'altitude':site_info['altitude']}
         
         station_data = concatenated.to_time_series(longitude=longitudes,latitude=latitudes,add_meta=station_metadata)
+        
+        del concatenated
         
         tst = 'monthly'
         trendtab =  []
@@ -126,14 +138,32 @@ if __name__ == '__main__':
             for (start,stop,min_yrs) in PERIODS:
                 for seas in SEASONS:
                     trend = te.compute_trend(ts, tst, start, stop, min_yrs,
-                                             seas)
+                                              seas)
 
                     row = [var, site_id, trend['period'], trend['season'],
-                           trend[f'slp_{start}'], trend[f'slp_{start}_err'],
-                           trend[f'reg0_{start}'], trend['m'], trend['m_err'],
-                           trend['n'], trend['pval'], unit]
+                            trend[f'slp_{start}'], trend[f'slp_{start}_err'],
+                            trend[f'reg0_{start}'], trend['m'], trend['m_err'],
+                            trend['n'], trend['pval'], unit]
 
                     trendtab.append(row)                    
 
         
 
+        trenddf = pd.DataFrame(trendtab,
+                               columns=['var',
+                                       'station_id',
+                                       'period',
+                                       'season',
+                                       'trend [%/yr]',
+                                       'trend err [%/yr]',
+                                       'yoffs',
+                                       'slope',
+                                       'slope err',
+                                       'num yrs',
+                                       'pval',
+                                       'unit'
+                                       ])
+
+        trendout = os.path.join(OUTPUT_DIR, f'trends_{var}.csv')
+
+        trenddf.to_csv(trendout)
