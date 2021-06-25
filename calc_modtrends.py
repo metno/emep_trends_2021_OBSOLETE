@@ -48,7 +48,7 @@ PATHS = {
     '2019'      : f'{preface}/lustre/storeB/project/fou/kl/emep/ModelRuns/2020_REPORTING/EMEP01_rv4_35_2019_tnoCRef2'    
     }
 # path = f'{preface}lustre/storeB/project/fou/kl/emep/ModelRuns/2019_REPORTING/TRENDS/'
-years = range(2011,2020)
+years = range(1999,2020)
 # years = [2016,2017,2018]
 
 var_info = {'concpm10':{'units':'ug m-3','data_freq':'day'},
@@ -59,9 +59,9 @@ var_info = {'concpm10':{'units':'ug m-3','data_freq':'day'},
 
 EMEP_VARS = [
              'concpm10',
-             # 'concpm25',
-             # 'concno2',
-             # 'concso4',
+              'concpm25',
+              'concno2',
+              'concso4',
              ]
 
 if __name__ == '__main__':
