@@ -67,7 +67,10 @@ EMEP_VARS = [
 if __name__ == '__main__':
 
     for var in EMEP_VARS:
-        site_info = pd.read_csv(f'obs_output/sitemeta_{var}.csv',index_col=0)
+        try:
+            site_info = pd.read_csv(f'obs_output/sitemeta_{var}.csv',index_col=0)
+        except FileNotFoundError:
+            continue
         data_freq =  var_info[var]['data_freq']
         data = []
         for year in years:
