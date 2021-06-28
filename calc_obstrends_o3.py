@@ -54,7 +54,7 @@ PERIODS = [(2000, 2019, 14),
            (2005, 2019, 10)]
 
 # variables to be processed in this script
-EBAS_VARS = ['conco3']
+EBAS_VARS = ['vmro3']
 
 # QC filters for EBAS data
 EBAS_BASE_FILTERS = dict(set_flags_nan   = True,
