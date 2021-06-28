@@ -50,7 +50,8 @@ def get_rs_how(percentile):
 # analysis periods and minimum no. of years required for trends retrieval
 PERIODS = [(2000, 2019, 14),
            (2000, 2010, 7),
-           (2010, 2019, 7)]
+           (2010, 2019, 7),
+           (2005, 2019, 10)]
 
 # variables to be processed in this script
 EBAS_VARS = ['conco3']
@@ -58,7 +59,8 @@ EBAS_VARS = ['conco3']
 # QC filters for EBAS data
 EBAS_BASE_FILTERS = dict(set_flags_nan   = True,
                          #data_level      = 2,
-                         framework       = ['EMEP*', 'ACTRIS*'])
+                         framework       = ['EMEP*', 'ACTRIS*'],
+                         ts_type         = 'hourly')
 
 # where results are stored
 OUTPUT_DIR = 'obs_output'
@@ -93,7 +95,7 @@ if __name__ == '__main__':
 
         data = oreader.read(vars_to_retrieve=var)
         data = data.apply_filters(**EBAS_BASE_FILTERS)
-        #data = data.apply_filters(station_name='Birkenes II')
+        # data = data.apply_filters(station_id='GB0013R')
 
         sitedata = data.to_station_data_all(var,
                                             resample_how=RESAMPLE_HOW,
@@ -139,15 +141,15 @@ if __name__ == '__main__':
             for percentile in PERECENTILES:
                 rs_how = get_rs_how(percentile)
                 try:
-                    site = site.resample_time(
+                    site_trend = site.resample_time(
                         var_name=var,
                         ts_type=tst,
                         min_num_obs=DEFAULT_RESAMPLE_CONSTRAINTS,
-                        how=rs_how)
+                        how=rs_how,inplace=False)
                 except pya.exceptions.TemporalResolutionError:
                     continue # lower res than monthly
 
-                ts = site[var]
+                ts = site_trend[var]
                 if len(ts) == 0 or np.isnan(ts).all(): # skip
                     continue
 
@@ -165,6 +167,13 @@ if __name__ == '__main__':
                            trend['n'], trend['pval'], unit, percentile]
 
                     trendtab.append(row)
+                    
+                    fname = f'{var}_{site_id}_{start}-{stop}_{percentile}p_yearly.csv'
+                    try:
+                        trend['data'].to_csv(os.path.join(subdir, fname))
+                    except AttributeError:
+                        pass
+                        
 
         metadf = pd.DataFrame(sitemeta,
                               columns=['var',

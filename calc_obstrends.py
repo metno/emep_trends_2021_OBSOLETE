@@ -26,14 +26,14 @@ DEFAULT_RESAMPLE_HOW = 'mean'
 
 PERIODS = [(2000, 2019, 14),
            (2000, 2010, 7),
-           (2010, 2019, 7)]
+           (2010, 2019, 7),]
 
 EBAS_VARS = [
-            'vmrno2',
-            'vmrno',
+            'concno2',
+            'concno',
             #'vmrox',
-            'vmrso2',
-            'vmrco',
+            'concso2',
+            'concco',
             'vmrc2h6',
             'vmrc2h4',
             'concpm25',
@@ -55,7 +55,10 @@ EBAS_VARS = [
             'wetoxs',
             'wetrdn',
             'wetoxn',
-            'pr'
+            'pr',
+            'concisop',
+            'concglyoxal',
+            'conchcho',
             ]
 EBAS_BASE_FILTERS = dict(set_flags_nan   = True,
                          #data_level      = 2
@@ -94,11 +97,12 @@ if __name__ == '__main__':
         data = data.apply_filters(**EBAS_BASE_FILTERS)
         #data = data.apply_filters(station_name='Birkenes II')
 
-        sitedata = data.to_station_data_all(var,
+        sitedata = data.to_station_data_all(var, start=start_yr-1, stop=stop_yr+1,
                                             resample_how=DEFAULT_RESAMPLE_HOW,
                                             min_num_obs=DEFAULT_RESAMPLE_CONSTRAINTS)
-        tst = 'monthly'
+        
         for site in tqdm.tqdm(sitedata['stats'], desc=var):
+            tst = 'daily'
             try:
                 site = site.resample_time(
                     var_name=var,
@@ -106,7 +110,15 @@ if __name__ == '__main__':
                     min_num_obs=DEFAULT_RESAMPLE_CONSTRAINTS,
                     how=DEFAULT_RESAMPLE_HOW)
             except pya.exceptions.TemporalResolutionError:
-                continue # lower res than monthly
+                tst = 'monthly'
+                try:
+                    site = site.resample_time(
+                    var_name=var,
+                    ts_type=tst,
+                    min_num_obs=DEFAULT_RESAMPLE_CONSTRAINTS,
+                    how=DEFAULT_RESAMPLE_HOW)
+                except pya.exceptions.TemporalResolutionError:
+                    continue
 
             ts = site[var].loc[start_yr:stop_yr]
             if len(ts) == 0 or np.isnan(ts).all(): # skip
@@ -131,6 +143,14 @@ if __name__ == '__main__':
                              site.framework,
                              site.var_info[var]['matrix']
                              ])
+            
+            if tst == 'daily':
+                site = site.resample_time(
+                    var_name=var,
+                    ts_type='monthly',
+                    min_num_obs=DEFAULT_RESAMPLE_CONSTRAINTS,
+                    how=DEFAULT_RESAMPLE_HOW)
+                tst = 'monthly'
 
             te = pya.trends_engine.TrendsEngine
 

@@ -14,6 +14,9 @@ import pyaerocom as pya
 from pyaerocom.trends_helpers import SEASONS
 
 
+def dummy(cube):
+    return cube
+
 DEFAULT_RESAMPLE_HOW = 'mean'
 
 PERIODS = [(2000, 2019, 14),
@@ -48,8 +51,8 @@ PATHS = {
     '2019'      : f'{preface}/lustre/storeB/project/fou/kl/emep/ModelRuns/2020_REPORTING/EMEP01_rv4_35_2019_tnoCRef2'    
     }
 # path = f'{preface}lustre/storeB/project/fou/kl/emep/ModelRuns/2019_REPORTING/TRENDS/'
-years = range(1999,2020)
-# years = [2016,2017,2018]
+# years = range(1999,2020)
+years = [2016,2017]
 
 var_info = {'concpm10':{'units':'ug m-3','data_freq':'day'},
             'concpm25':{'units':'ug m-3','data_freq':'day'},
@@ -59,9 +62,9 @@ var_info = {'concpm10':{'units':'ug m-3','data_freq':'day'},
 
 EMEP_VARS = [
              'concpm10',
-              'concpm25',
-              'concno2',
-              'concso4',
+              # 'concpm25',
+              # 'concno2',
+              # 'concso4',
              ]
 
 #example syntax. Not implemented yet
@@ -77,6 +80,12 @@ if __name__ == '__main__':
         except FileNotFoundError:
             print(f'No sitemeta file found for {var}, skipping...')
             continue
+        
+        try:
+            calculate_how = CALCULATE_HOW[var]
+        except KeyError:
+            calculate_how = {'req_vars' : [var],'function' : dummy}
+        
         data_freq =  var_info[var]['data_freq']
         data = []
         for year in years:
@@ -97,19 +106,20 @@ if __name__ == '__main__':
         
             reader = pya.io.ReadMscwCtm(data_id)
             
-            try:
-                calculate_how = CALCULATE_HOW[var]
-            except KeyError:
-                calculate_how = {'req_vars' : [var]}
+
+            temp_data = []    
+            for req_var in calculate_how['req_vars']:
+                temp = reader.read_var(req_var)
+                if temp.cube.units == 'unknown':
+                    temp.cube.units=var_info[req_var]['units']
+                tcoord = temp.cube.coords('time')[0]
+                if tcoord.units.calendar == 'proleptic_gregorian':
+                    tcoord.units = cf_units.Unit(tcoord.units.origin, calendar='gregorian')
+                
+                temp_data.append(temp.cube)
             
-            temp = reader.read_var(var)
-            if temp.cube.units == 'unknown':
-                temp.cube.units=var_info[var]['units']
-            tcoord = temp.cube.coords('time')[0]
-            if tcoord.units.calendar == 'proleptic_gregorian':
-                tcoord.units = cf_units.Unit(tcoord.units.origin, calendar='gregorian')
-            
-            data.append(temp.cube)
+            calc_temp = calculate_how['function'](*temp_data)
+            data.append(calc_temp)
             
         concatenated = pya.GriddedData(pya.io.iris_io.concatenate_iris_cubes(iris.cube.CubeList(data),True))
         

@@ -1,0 +1,125 @@
+,var,station_id,station_name,latitude,longitude,altitude,unit,freq,framework,matrix
+0,vmrno2,CY0002R,Agia Marina Xyliatou ; Cyprus Atmospheric Observatory,35.0381,33.0578,523.0,nmol mol-1,monthly,EMEP,air
+1,vmrno2,GR0001R,Aliartos,38.366667,23.083333,110.0,nmol mol-1,monthly,EMEP,air
+2,vmrno2,AM0001R,Amberd,40.38444444,44.260583333,2080.0,nmol mol-1,monthly,EMEP,air
+3,vmrno2,DK0008R,Anholt,56.716667,11.516667,40.0,nmol mol-1,monthly,EMEP;EMEP HELCOM,air
+4,vmrno2,SE0012R,Aspvreten,58.8,17.383333,20.0,nmol mol-1,monthly,EMEP HELCOM,air
+5,vmrno2,GB0031R,Aston Hill,52.503889,-3.033056,370.0,nmol mol-1,monthly,EMEP,air
+6,vmrno2,GB0048R,Auchencorth Moss,55.79216,-3.2429,260.0,nmol mol-1,monthly,EMEP,air
+7,vmrno2,ES0011R,Barcarrota,38.47278,-6.92361,393.0,nmol mol-1,monthly,EMEP,air
+8,vmrno2,CH0053R,Beromünster,47.18961391,8.175433684,797.0,nmol mol-1,monthly,EMEP,air
+9,vmrno2,NO0002R,Birkenes II,58.38853,8.252,219.0,nmol mol-1,monthly,EMEP,air
+10,vmrno2,DE0005R,Brotjacklriegel,48.819444,13.219167,1016.0,nmol mol-1,monthly,EMEP,air
+11,vmrno2,GB0033R,Bush,55.858611,-3.205,180.0,nmol mol-1,monthly,EMEP,air
+12,vmrno2,NL0644R,Cabauw Wielsekade,51.974444,4.923611,3.0,nmol mol-1,monthly,EMEP,air
+13,vmrno2,NL0011R,Cabauw Zijdeweg,51.970278,4.926389,1.0,nmol mol-1,monthly,EMEP,air
+14,vmrno2,ES0010R,Cabo de Creus,42.31917,3.31583,76.0,nmol mol-1,monthly,EMEP,air
+15,vmrno2,ES0009R,Campisabalos,41.27417,-3.1425,1360.0,nmol mol-1,monthly,EMEP;EMEP sel_GEOmon2.1,air
+16,vmrno2,CV0001G,Cape Verde Atmospheric Observatory,16.86403,-24.86752,17.5,nmol mol-1,monthly,ACTRIS GAW-WDCRG,air
+17,vmrno2,IT0014R,Capo Granitola,37.571111,12.659722,5.0,nmol mol-1,monthly,ACTRIS GAW-WDCRG,air
+18,vmrno2,GB0053R,Charlton Mackrell,51.05625,-2.68345,54.0,nmol mol-1,monthly,EMEP,air
+19,vmrno2,CH0004R,Chaumont,47.049722,6.979444,1137.0,nmol mol-1,monthly,EMEP,air
+20,vmrno2,SK0002R,Chopok,48.933333,19.583333,2008.0,nmol mol-1,monthly,EMEP,air
+21,vmrno2,TR0001R,Cubuk II,40.5,33.0,1169.0,nmol mol-1,monthly,EMEP,air
+22,vmrno2,NL0091R,De Zilk,52.3,4.5,4.0,nmol mol-1,monthly,EMEP;EMEP CAMP,air
+23,vmrno2,DE0004R,Deuselbach,49.764722,7.051944,480.0,nmol mol-1,monthly,EMEP,air
+24,vmrno2,PL0005R,Diabla Gora,54.15,22.066667,161.35,nmol mol-1,monthly,EMEP,air
+25,vmrno2,FR0008R,Donon,48.5,7.133333,775.0,nmol mol-1,monthly,EMEP;EMEP sel_GEOmon2.1,air
+26,vmrno2,ES0017R,Doñana,37.05194,-6.55528,35.0,nmol mol-1,monthly,EMEP;EMEP CAMP,air
+27,vmrno2,NL0007R,Eibergen,52.083333,6.566667,22.0,nmol mol-1,monthly,EMEP,air
+28,vmrno2,ES0014R,Els Torms,41.39389,0.73472,470.0,nmol mol-1,monthly,EMEP,air
+29,vmrno2,GB0002R,Eskdalemuir,55.313056,-3.204167,243.0,nmol mol-1,monthly,EMEP,air
+30,vmrno2,BE0032R,Eupen,50.629421,6.001019,295.0,nmol mol-1,monthly,EMEP,air
+31,vmrno2,HU0003R,Farkasfa,46.91,16.32,314.0,nmol mol-1,monthly,EMEP,air
+32,vmrno2,MT0001R,Giordan Lighthouse,36.0722,14.2184,174.0,nmol mol-1,monthly,EMEP GAW-WDCRG,air
+33,vmrno2,SE0020R,Hallahus,56.0429,13.148,190.0,nmol mol-1,monthly,EMEP HELCOM,air
+34,vmrno2,GB0036R,Harwell,51.573056,-1.316667,137.0,nmol mol-1,monthly,EMEP CAMP;EMEP sel_GEOmon2.1,air
+35,vmrno2,SE0008R,Hoburgen,56.916667,18.15,58.0,nmol mol-1,monthly,EMEP HELCOM,air
+36,vmrno2,DE0043G,Hohenpeissenberg,47.8014984131,11.009619,985.0,nmol mol-1,monthly,ACTRIS GAW-WDCRG;ACTRIS EMEP GAW-WDCGG-node,air
+37,vmrno2,NO0056R,Hurdal,60.372386,11.078142,300.0,nmol mol-1,monthly,EMEP NILU;EMEP_preliminary NILU,air
+38,vmrno2,FI0050R,Hyytiälä,61.85,24.283333,215.0,nmol mol-1,monthly,ACTRIS GAW-WDCA;ACTRIS GAW-WDCA GAW-WDCRG;ACTRIS EMEP GAW-WDCGG-node,air
+39,vmrno2,AT0002R,Illmitz,47.7666664124,16.7666664124,117.0,nmol mol-1,monthly,EMEP,air
+40,vmrno2,SI0008R,Iskrba,45.566667,14.866667,525.0,nmol mol-1,monthly,EMEP GAW-WDCRG,air
+41,vmrno2,IT0004R,Ispra,45.8,8.633333,215.5,nmol mol-1,monthly,ACTRIS EMEP;EMEP sel_GEOmon2.1;ACTRIS EMEP GAW-WDCGG-node,air
+42,vmrno2,PL0002R,Jarczew,51.814408,21.972419,182.24,nmol mol-1,monthly,EMEP GAW-WDCRG,air
+43,vmrno2,CH0001G,Jungfraujoch,46.5475,7.985,3578.0,nmol mol-1,monthly,EMEP GAW-WDCRG;EMEP GAW-WDCRG sel_GEOmon2.1,air
+44,vmrno2,HU0002R,K-puszta,46.966667,19.583333,128.0,nmol mol-1,monthly,EMEP GAW-WDCRG;EMEP sel_GEOmon2.1,air
+45,vmrno2,RS0005R,Kamenicki vis,43.4,21.95,813.0,nmol mol-1,monthly,EMEP,air
+46,vmrno2,DK0005R,Keldsnor,54.746495,10.73616,10.0,nmol mol-1,monthly,EMEP,air
+47,vmrno2,NL0009R,Kollumerwaard,53.333889,6.277222,1.0,nmol mol-1,monthly,EMEP;EMEP sel_GEOmon2.1;EMEP CAMP,air
+48,vmrno2,CZ0003R,Kosetice (NOAK),49.573394,15.080278,538.0,nmol mol-1,monthly,ACTRIS EMEP GAW-WDCRG;ACTRIS EMEP GAW-WDCGG-node;EMEP sel_GEOmon2.1,air
+49,vmrno2,FR0015R,La Tardière,46.65,-0.75,137.0,nmol mol-1,monthly,ACTRIS EMEP GAW-WDCGG-node,air
+50,vmrno2,GB0037R,Ladybower Res.,53.398889,-1.753333,420.0,nmol mol-1,monthly,EMEP,air
+51,vmrno2,EE0009R,Lahemaa,59.5,25.9,32.0,nmol mol-1,monthly,EMEP;EMEP HELCOM,air
+52,vmrno2,MK0007R,Lazaropole,41.536111,20.69389,1332.0,nmol mol-1,monthly,EMEP,air
+53,vmrno2,PL0004R,Leba,54.753894,17.534264,5.0,nmol mol-1,monthly,EMEP GAW-WDCRG;EMEP HELCOM,air
+54,vmrno2,MD0013R,Leova II,46.4884,28.2835,166.0,nmol mol-1,monthly,EMEP,air
+55,vmrno2,SK0005R,Liesek,49.366667,19.683333,892.0,nmol mol-1,monthly,EMEP,air
+56,vmrno2,ES0004R,Logroño,42.457778,-2.503056,445.0,nmol mol-1,monthly,EMEP,air
+57,vmrno2,GB0038R,Lullington Heath,50.792778,0.179444,120.0,nmol mol-1,monthly,EMEP,air
+58,vmrno2,ES0006R,Mahón,39.87528,4.31639,78.0,nmol mol-1,monthly,EMEP;EMEP sel_GEOmon2.1,air
+59,vmrno2,GB0051R,Market Harborough,52.554444,-0.772222,145.0,nmol mol-1,monthly,EMEP,air
+60,vmrno2,DE0044R,Melpitz,51.53014,12.93386,89.5,nmol mol-1,monthly,ACTRIS EMEP GAW-WDCGG-node,air
+61,vmrno2,IT0019R,Monte Martano,42.805462,12.565645,1090.0,nmol mol-1,monthly,EMEP,air
+62,vmrno2,IT0001R,Montelibretti,42.1,12.633333,48.0,nmol mol-1,monthly,EMEP,air
+63,vmrno2,IT0009R,Mt Cimone,44.183333,10.7,2165.0,nmol mol-1,monthly,ACTRIS GAW-WDCRG,air
+64,vmrno2,GB0043R,Narberth,51.781784,-4.691462,160.0,nmol mol-1,monthly,EMEP,air
+65,vmrno2,DE0007R,Neuglobsow,53.166667,13.033333,68.2,nmol mol-1,monthly,EMEP;EMEP sel_GEOmon2.1,air
+66,vmrno2,ES0005R,Noia,42.72056,-8.92361,683.0,nmol mol-1,monthly,EMEP,air
+67,vmrno2,SE0022R,Norunda Stenen,60.0858,17.50528,45.0,nmol mol-1,monthly,EMEP HELCOM,air
+68,vmrno2,ES0016R,O Saviñao,42.63472,-7.70472,506.0,nmol mol-1,monthly,EMEP,air
+69,vmrno2,BE0001R,Offagne,49.877778,5.203611,430.0,nmol mol-1,monthly,EMEP,air
+70,vmrno2,NO0041R,Osen,61.25,11.783333,440.0,nmol mol-1,monthly,EMEP NILU,air
+71,vmrno2,FI0022R,Oulanka,66.320278,29.401667,315.0,nmol mol-1,monthly,EMEP,air
+72,vmrno2,FI0096G,Pallas (Sammaltunturi),67.973333333,24.116111111,565.0,nmol mol-1,monthly,ACTRIS EMEP GAW-WDCRG;ACTRIS AMAP EMEP GAW-WDCRG;ACTRIS EMEP_preliminary GAW-WDCRG,air
+73,vmrno2,CH0002R,Payerne,46.813056,6.944722,489.0,nmol mol-1,monthly,EMEP;EMEP GAW-WDCRG,air
+74,vmrno2,ES0013R,Penausende,41.23889,-5.8975,985.0,nmol mol-1,monthly,EMEP,air
+75,vmrno2,FR0013R,Peyrusse Vieille,43.616667,0.183333,204.0,nmol mol-1,monthly,ACTRIS EMEP GAW-WDCRG;ACTRIS EMEP GAW-WDCGG-node,air
+76,vmrno2,RO0008R,Poiana Stampei,47.324792,25.134664,908.0,nmol mol-1,monthly,EMEP,air
+77,vmrno2,LT0015R,Preila,55.3761111111,21.0305555556,7.0,nmol mol-1,monthly,EMEP;EMEP HELCOM;EMEP HELCOM sel_GEOmon2.1,air
+78,vmrno2,FR0030R,Puy de Dôme,45.772223,2.964886,1477.0,nmol mol-1,monthly,ACTRIS EMEP GAW-WDCGG-node,air
+79,vmrno2,FR0009R,Revin,49.9,4.633333,394.0,nmol mol-1,monthly,ACTRIS EMEP GAW-WDCRG;EMEP EUSAAR GAW-WDCA,air
+80,vmrno2,CH0005R,Rigi,47.0675,8.463889,1031.0,nmol mol-1,monthly,EMEP GAW-WDCRG;EMEP GAW-WDCGG-node GAW-WDCRG,air
+81,vmrno2,ES0015R,Risco Llamo,39.516667,-4.35,1241.0,nmol mol-1,monthly,EMEP,air
+82,vmrno2,DK0012R,Risoe,55.693588,12.085797,3.0,nmol mol-1,monthly,EMEP,air
+83,vmrno2,ES0003R,Roquetas,40.820556,0.491389,44.0,nmol mol-1,monthly,EMEP sel_GEOmon2.1,air
+84,vmrno2,LV0010R,Rucava,56.161944,21.173056,19.8,nmol mol-1,monthly,EMEP GAW-WDCA;EMEP HELCOM,air
+85,vmrno2,FR0020R,SIRTA Atmospheric Research Observatory,48.7086111111,2.15888888889,165.0,nmol mol-1,monthly,ACTRIS EMEP GAW-WDCA,air
+86,vmrno2,ES0001R,San Pablo de los Montes,39.54694,-4.35056,917.0,nmol mol-1,monthly,EMEP,air
+87,vmrno2,DE0003R,Schauinsland,47.914722,7.908611,1217.0,nmol mol-1,monthly,EMEP;EMEP sel_GEOmon2.1,air
+88,vmrno2,DE0008R,Schmücke,50.65,10.766667,953.0,nmol mol-1,monthly,EMEP;EMEP sel_GEOmon2.1,air
+89,vmrno2,RO0003R,Semenic,45.116667,25.966667,1432.0,nmol mol-1,monthly,EMEP,air
+90,vmrno2,NO0008R,Skreådalen,58.816667,6.716667,475.0,nmol mol-1,monthly,EMEP NILU,air
+91,vmrno2,PL0003R,Sniezka,50.736444,15.7395,1607.5,nmol mol-1,monthly,EMEP GAW-WDCRG;EMEP sel_GEOmon2.1,air
+92,vmrno2,GB0044R,Somerton,51.231111,-3.048056,55.0,nmol mol-1,monthly,EMEP,air
+93,vmrno2,AT0034G,Sonnblick,47.05407,12.95794,3116.0,nmol mol-1,monthly,EMEP GAW-WDCRG;EMEP_preliminary GAW-WDCRG,air
+94,vmrno2,AT0004R,St. Koloman,47.65,13.2,851.0,nmol mol-1,monthly,EMEP,air
+95,vmrno2,GB0050R,St. Osyth,51.778056,1.08223,8.0,nmol mol-1,monthly,EMEP,air
+96,vmrno2,SK0006R,Starina,49.05,22.266667,345.0,nmol mol-1,monthly,EMEP,air
+97,vmrno2,SK0004R,Stará Lesná,49.15,20.283333,808.0,nmol mol-1,monthly,EMEP,air
+98,vmrno2,CZ0001R,Svratouch,49.735084444,16.034196944,735.0,nmol mol-1,monthly,EMEP,air
+99,vmrno2,SK0007R,Topolniky,47.96,17.860556,113.0,nmol mol-1,monthly,EMEP,air
+100,vmrno2,NO0015R,Tustervatn,65.833333,13.916667,439.0,nmol mol-1,monthly,EMEP NILU;EMEP_preliminary NILU,air
+101,vmrno2,CH0003R,Tänikon,47.479722,8.904722,539.0,nmol mol-1,monthly,EMEP,air
+102,vmrno2,DK0031R,Ulborg,56.290424,8.427486,10.0,nmol mol-1,monthly,EMEP,air
+103,vmrno2,FI0009R,Utö,59.779167,21.377222,12.0,nmol mol-1,monthly,EMEP;EMEP HELCOM,air
+104,vmrno2,IE0001R,Valentia Observatory,51.939722,-10.244444,11.0,nmol mol-1,monthly,EMEP,air
+105,vmrno2,SE0011R,Vavihill,56.016667,13.15,175.0,nmol mol-1,monthly,EMEP HELCOM,air
+106,vmrno2,BE0035R,Vezin,50.503333,4.989444,160.0,nmol mol-1,monthly,EMEP,air
+107,vmrno2,EE0011R,Vilsandi,58.383333,21.816667,6.0,nmol mol-1,monthly,EMEP;EMEP HELCOM,air
+108,vmrno2,FI0017R,Virolahti II,60.526667,27.686111,4.0,nmol mol-1,monthly,EMEP;EMEP HELCOM,air
+109,vmrno2,FI0018R,Virolahti III,60.53002,27.66754,9.0,nmol mol-1,monthly,EMEP,air
+110,vmrno2,AT0005R,Vorhegg,46.677778,12.972222,1020.0,nmol mol-1,monthly,EMEP,air
+111,vmrno2,NL0010R,Vredepeel,51.541111,5.853611,30.0,nmol mol-1,monthly,EMEP,air
+112,vmrno2,ES0007R,Víznar,37.23722,-3.53417,1230.0,nmol mol-1,monthly,EMEP,air
+113,vmrno2,DE0002R,Waldhof,52.802222,10.759444,81.0,nmol mol-1,monthly,EMEP,air
+114,vmrno2,DE0001R,Westerland,54.925556,8.309722,22.5,nmol mol-1,monthly,EMEP,air
+115,vmrno2,GB0045R,Wicken Fen,52.298333,0.292778,5.0,nmol mol-1,monthly,EMEP,air
+116,vmrno2,GB0013R,Yarner Wood,50.596389,-3.713056,119.0,nmol mol-1,monthly,EMEP,air
+117,vmrno2,ME0008R,Zabljak,43.15,19.133333,1450.0,nmol mol-1,monthly,EMEP,air
+118,vmrno2,ES0012R,Zarra,39.08278,-1.10111,885.0,nmol mol-1,monthly,EMEP,air
+119,vmrno2,DE0009R,Zingst,54.4368,12.7249,9.0,nmol mol-1,monthly,EMEP;EMEP HELCOM;EMEP HELCOM sel_GEOmon2.1,air
+120,vmrno2,AT0048R,Zoebelboden,47.838611,14.441389,899.0,nmol mol-1,monthly,EMEP,air
+121,vmrno2,LV0016R,Zoseni,57.135278,25.905556,188.0,nmol mol-1,monthly,EMEP;EMEP HELCOM,air
+122,vmrno2,DE0054R,Zugspitze-Schneefernerhaus,47.4165,10.97964,2674.0,nmol mol-1,monthly,EMEP GAW-WDCRG,air
+123,vmrno2,FI0037R,Ähtäri II,62.583333,24.183333,180.0,nmol mol-1,monthly,EMEP,air
