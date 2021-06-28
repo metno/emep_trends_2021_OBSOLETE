@@ -64,12 +64,18 @@ EMEP_VARS = [
               'concso4',
              ]
 
+#example syntax. Not implemented yet
+CALCULATE_HOW = {'concox':{'req_vars':['conco3','concno2'],
+                           'function':pya.io.aux_read_cubes.add_cubes}}
+
 if __name__ == '__main__':
 
     for var in EMEP_VARS:
+        print(f'Processing {var}')
         try:
             site_info = pd.read_csv(f'obs_output/sitemeta_{var}.csv',index_col=0)
         except FileNotFoundError:
+            print(f'No sitemeta file found for {var}, skipping...')
             continue
         data_freq =  var_info[var]['data_freq']
         data = []
@@ -90,6 +96,12 @@ if __name__ == '__main__':
                 raise ValueError
         
             reader = pya.io.ReadMscwCtm(data_id)
+            
+            try:
+                calculate_how = CALCULATE_HOW[var]
+            except KeyError:
+                calculate_how = {'req_vars' : [var]}
+            
             temp = reader.read_var(var)
             if temp.cube.units == 'unknown':
                 temp.cube.units=var_info[var]['units']
