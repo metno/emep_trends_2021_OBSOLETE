@@ -7,11 +7,11 @@ Created on Wed Jun 23 10:17:17 2021
 """
 import os, shutil, glob
 
-ALL_EBAS_VARS = ['vmrno2',
-                 'vmrno',
+ALL_EBAS_VARS = ['concNno2',
+                 'concno',
                  #'vmrox',
-                 'vmrso2',
-                 'vmrco',
+                 'concso2',
+                 'concco',
                  'vmrc2h6',
                  'vmrc2h4',
                  'concpm25',
@@ -33,5 +33,8 @@ ALL_EBAS_VARS = ['vmrno2',
                  'wetoxs',
                  'wetrdn',
                  'wetoxn',
-                 'pr'
+                 'pr',
+                 'concisop',
+                 'concglyoxal',
+                 'conchcho'
                  ]

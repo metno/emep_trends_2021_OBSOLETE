@@ -16,6 +16,8 @@ from helper_functions import (delete_outdated_output, clear_obs_output,
 
 from variables import ALL_EBAS_VARS
 
+SEASONS = ['all'] + list(SEASONS)
+
 EBAS_LOCAL = '/home/jonasg/MyPyaerocom/data/obsdata/EBASMultiColumn/data'
 EBAS_ID = 'EBASMC'
 
@@ -26,11 +28,12 @@ DEFAULT_RESAMPLE_HOW = 'mean'
 
 PERIODS = [(2000, 2019, 14),
            (2000, 2010, 7),
-           (2010, 2019, 7),]
+           (2010, 2019, 7),
+           (2005, 2019,10),]
 
 EBAS_VARS = [
-            'concno2',
-            'concno',
+            # 'concNno2',
+            # 'concno',
             #'vmrox',
             'concso2',
             'concco',
@@ -97,7 +100,7 @@ if __name__ == '__main__':
         data = data.apply_filters(**EBAS_BASE_FILTERS)
         #data = data.apply_filters(station_name='Birkenes II')
 
-        sitedata = data.to_station_data_all(var, start=start_yr-1, stop=stop_yr+1,
+        sitedata = data.to_station_data_all(var, start=int(start_yr)-1,
                                             resample_how=DEFAULT_RESAMPLE_HOW,
                                             min_num_obs=DEFAULT_RESAMPLE_CONSTRAINTS)
         
@@ -166,7 +169,13 @@ if __name__ == '__main__':
                            trend['n'], trend['pval'], unit]
 
                     trendtab.append(row)
-
+                    
+                    fname = f'{var}_{site_id}_{start}-{stop}_{seas}_yearly.csv'
+                    try:
+                        trend['data'].to_csv(os.path.join(subdir, fname))
+                    except AttributeError:
+                        pass
+                    
         metadf = pd.DataFrame(sitemeta,
                               columns=['var',
                                        'station_id',

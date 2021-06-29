@@ -1,17 +1,1 @@
 ,var,station_id,station_name,latitude,longitude,altitude,unit,freq,framework,matrix
-0,concsspm25,CY0002R,Agia Marina Xyliatou ; Cyprus Atmospheric Observatory,35.0381,33.0578,520.0,ug m-3,monthly,EMEP,pm25
-1,concsspm25,GB0048R,Auchencorth Moss,55.79216,-3.2429,260.0,ug m-3,monthly,EMEP;EMEP CAMP,pm25
-2,concsspm25,GB1055R,Chilbolton Observatory,51.149617,-1.438228,78.0,ug m-3,monthly,EMEP,pm25
-3,concsspm25,PL0005R,Diabla Gora,54.15,22.066667,159.0,ug m-3,monthly,EMEP,pm25
-4,concsspm25,GB0036R,Harwell,51.573056,-1.316667,137.0,ug m-3,monthly,EMEP;EMEP CAMP,pm25
-5,concsspm25,SI0008R,Iskrba,45.566667,14.866667,525.0,ug m-3,monthly,EMEP,pm25
-6,concsspm25,IT0004R,Ispra,45.8,8.633333,215.5,ug m-3,monthly,EMEP,pm25
-7,concsspm25,CZ0003R,Kosetice (NOAK),49.573394,15.080278,535.0,ug m-3,monthly,EMEP,pm25
-8,concsspm25,DE0044R,Melpitz,51.53014,12.93386,86.0,ug m-3,monthly,EMEP,pm25
-9,concsspm25,ES1778R,Montseny,41.766667,2.35,700.0,ug m-3,monthly,EMEP;EMEP EUSAAR GAW-WDCA;ACTRIS EMEP GAW-WDCA,pm25
-10,concsspm25,FI0036R,Pallas (Matorova),68.0,24.237222222,340.0,ug m-3,monthly,EMEP,pm25
-11,concsspm25,LV0010R,Rucava,56.161944,21.173056,21.0,ug m-3,monthly,EMEP GAW-WDCA,pm25
-12,concsspm25,FI0009R,Utö,59.779167,21.377222,7.0,ug m-3,monthly,EMEP,pm25
-13,concsspm25,FI0017R,Virolahti II,60.526667,27.686111,4.0,ug m-3,monthly,EMEP,pm25
-14,concsspm25,PL0009R,Zielonka,53.662117,17.934017,123.0,ug m-3,monthly,EMEP,pm25
-15,concsspm25,LV0016R,Zoseni,57.135278,25.905556,188.0,ug m-3,monthly,EMEP,pm25
