@@ -1,1 +1,71 @@
 ,var,station_id,station_name,latitude,longitude,altitude,unit,freq,framework,matrix
+0,concNtno3,GE0001R,Abastumani,41.755053,42.825333,1650.0,ug N m-3,daily,EMEP,air+aerosol
+1,concNtno3,AM0001R,Amberd,40.38444444,44.260583333,2080.0,ug N m-3,daily,EMEP,air+aerosol
+2,concNtno3,DK0008R,Anholt,56.716667,11.516667,40.0,ug N m-3,daily,EMEP,air+aerosol
+3,concNtno3,SE0012R,Aspvreten,58.8,17.383333,20.0,ug N m-3,daily,EMEP HELCOM,air+aerosol
+4,concNtno3,ES0011R,Barcarrota,38.47278,-6.92361,393.0,ug N m-3,daily,EMEP,air+aerosol
+5,concNtno3,ES0010R,Cabo de Creus,42.31917,3.31583,76.0,ug N m-3,daily,EMEP,air+aerosol
+6,concNtno3,ES0009R,Campisabalos,41.27417,-3.1425,1360.0,ug N m-3,daily,EMEP,air+aerosol
+7,concNtno3,SK0002R,Chopok,48.933333,19.583333,2008.0,ug N m-3,daily,EMEP,air+aerosol
+8,concNtno3,CZ0005R,Churanov,49.066667,13.6,1118.0,ug N m-3,daily,EMEP,air+aerosol
+9,concNtno3,TR0001R,Cubuk II,40.5,33.0,1169.0,ug N m-3,daily,EMEP,air+aerosol
+10,concNtno3,DE0004R,Deuselbach,49.764722,7.051944,480.0,ug N m-3,daily,EMEP,air+aerosol
+11,concNtno3,PL0005R,Diabla Gora,54.15,22.066667,159.45,ug N m-3,daily,EMEP,air+aerosol
+12,concNtno3,ES0017R,Doñana,37.05194,-6.55528,35.0,ug N m-3,daily,EMEP,air+aerosol
+13,concNtno3,ES0014R,Els Torms,41.39389,0.73472,470.0,ug N m-3,daily,EMEP,air+aerosol
+14,concNtno3,GB0002R,Eskdalemuir,55.313056,-3.204167,243.0,ug N m-3,daily,EMEP,air+aerosol
+15,concNtno3,HU0003R,Farkasfa,46.91,16.32,314.0,ug N m-3,daily,EMEP,air+aerosol
+16,concNtno3,SE0020R,Hallahus,56.0429,13.148,190.0,ug N m-3,monthly,EMEP HELCOM,air+aerosol
+17,concNtno3,NO0056R,Hurdal,60.372386,11.078142,300.0,ug N m-3,daily,EMEP NILU,air+aerosol
+18,concNtno3,FI0050R,Hyytiälä,61.85,24.283333,184.0,ug N m-3,monthly,EMEP,air+aerosol
+19,concNtno3,AT0002R,Illmitz,47.7666664124,16.7666664124,117.0,ug N m-3,daily,EMEP,air+aerosol
+20,concNtno3,SI0008R,Iskrba,45.566667,14.866667,520.0,ug N m-3,daily,EMEP,air+aerosol
+21,concNtno3,PL0002R,Jarczew,51.814408,21.972419,182.24,ug N m-3,daily,EMEP GAW-WDCA,air+aerosol
+22,concNtno3,HU0002R,K-puszta,46.966667,19.583333,128.0,ug N m-3,daily,EMEP,air+aerosol
+23,concNtno3,DK0005R,Keldsnor,54.746495,10.73616,10.0,ug N m-3,daily,EMEP;EMEP HELCOM,air+aerosol
+24,concNtno3,CZ0003R,Kosetice (NOAK),49.573394,15.080278,535.0,ug N m-3,daily,EMEP,air+aerosol
+25,concNtno3,FR0015R,La Tardière,46.65,-0.75,133.0,ug N m-3,monthly,EMEP,air+aerosol
+26,concNtno3,PL0004R,Leba,54.753894,17.534264,5.0,ug N m-3,daily,EMEP GAW-WDCA;EMEP HELCOM,air+aerosol
+27,concNtno3,MD0013R,Leova II,46.4884,28.2835,166.0,ug N m-3,daily,EMEP,air+aerosol
+28,concNtno3,SK0005R,Liesek,49.366667,19.683333,892.0,ug N m-3,daily,EMEP,air+aerosol
+29,concNtno3,ES0004R,Logroño,42.457778,-2.503056,445.0,ug N m-3,daily,EMEP,air+aerosol
+30,concNtno3,ES0006R,Mahón,39.87528,4.31639,78.0,ug N m-3,daily,EMEP,air+aerosol
+31,concNtno3,IT0001R,Montelibretti,42.1,12.633333,48.0,ug N m-3,daily,EMEP,air+aerosol
+32,concNtno3,DE0007R,Neuglobsow,53.166667,13.033333,65.5,ug N m-3,daily,EMEP,air+aerosol
+33,concNtno3,SE0022R,Norunda Stenen,60.0858,17.50528,45.0,ug N m-3,daily,EMEP HELCOM,air+aerosol
+34,concNtno3,ES0016R,O Saviñao,42.63472,-7.70472,506.0,ug N m-3,daily,EMEP,air+aerosol
+35,concNtno3,NO0041R,Osen,61.25,11.783333,440.0,ug N m-3,daily,EMEP NILU,air+aerosol
+36,concNtno3,FI0022R,Oulanka,66.320278,29.401667,310.0,ug N m-3,monthly,EMEP;EMEP AMAP,air+aerosol
+37,concNtno3,FI0036R,Pallas (Matorova),68.0,24.237222222,340.0,ug N m-3,daily,EMEP,air+aerosol
+38,concNtno3,CH0002R,Payerne,46.813056,6.944722,489.0,ug N m-3,daily,EMEP,air+aerosol
+39,concNtno3,ES0013R,Penausende,41.23889,-5.8975,985.0,ug N m-3,daily,EMEP,air+aerosol
+40,concNtno3,FR0013R,Peyrusse Vieille,43.616667,0.183333,200.0,ug N m-3,monthly,EMEP,air+aerosol
+41,concNtno3,LT0015R,Preila,55.3761111111,21.0305555556,7.0,ug N m-3,daily,EMEP;EMEP HELCOM,air+aerosol
+42,concNtno3,FR0009R,Revin,49.9,4.633333,390.0,ug N m-3,monthly,EMEP,air+aerosol
+43,concNtno3,CH0005R,Rigi,47.0675,8.463889,1031.0,ug N m-3,daily,EMEP,air+aerosol
+44,concNtno3,ES0015R,Risco Llamo,39.516667,-4.35,1241.0,ug N m-3,daily,EMEP,air+aerosol
+45,concNtno3,DK0012R,Risoe,55.693588,12.085797,3.0,ug N m-3,daily,EMEP,air+aerosol
+46,concNtno3,ES0003R,Roquetas,40.820556,0.491389,44.0,ug N m-3,daily,EMEP,air+aerosol
+47,concNtno3,LV0010R,Rucava,56.161944,21.173056,19.8,ug N m-3,daily,EMEP GAW-WDCA;EMEP HELCOM,air+aerosol
+48,concNtno3,ES0001R,San Pablo de los Montes,39.54694,-4.35056,917.0,ug N m-3,daily,EMEP,air+aerosol
+49,concNtno3,DE0003R,Schauinsland,47.914722,7.908611,1208.5,ug N m-3,daily,EMEP,air+aerosol
+50,concNtno3,NO0008R,Skreådalen,58.816667,6.716667,475.0,ug N m-3,daily,EMEP NILU,air+aerosol
+51,concNtno3,PL0003R,Sniezka,50.736444,15.7395,1607.5,ug N m-3,daily,EMEP GAW-WDCA,air+aerosol
+52,concNtno3,SK0006R,Starina,49.05,22.266667,345.0,ug N m-3,daily,EMEP,air+aerosol
+53,concNtno3,SK0004R,Stará Lesná,49.15,20.283333,808.0,ug N m-3,daily,EMEP,air+aerosol
+54,concNtno3,CZ0001R,Svratouch,49.735084444,16.034196944,735.0,ug N m-3,daily,EMEP,air+aerosol
+55,concNtno3,DK0003R,Tange,56.35,9.6,13.0,ug N m-3,daily,EMEP,air+aerosol
+56,concNtno3,NO0015R,Tustervatn,65.833333,13.916667,439.0,ug N m-3,daily,EMEP NILU,air+aerosol
+57,concNtno3,DK0031R,Ulborg,56.290424,8.427486,10.0,ug N m-3,daily,EMEP,air+aerosol
+58,concNtno3,FI0009R,Utö,59.779167,21.377222,7.0,ug N m-3,daily,EMEP;EMEP HELCOM;EMEP_preliminary HELCOM,air+aerosol
+59,concNtno3,IE0001R,Valentia Observatory,51.939722,-10.244444,13.0,ug N m-3,daily,EMEP CAMP,air+aerosol
+60,concNtno3,SE0011R,Vavihill,56.016667,13.15,175.0,ug N m-3,daily,EMEP HELCOM,air+aerosol
+61,concNtno3,FI0017R,Virolahti II,60.526667,27.686111,4.0,ug N m-3,daily,EMEP;EMEP HELCOM,air+aerosol
+62,concNtno3,FI0018R,Virolahti III,60.53002,27.66754,7.0,ug N m-3,daily,EMEP_preliminary HELCOM,air+aerosol
+63,concNtno3,ES0007R,Víznar,37.23722,-3.53417,1230.0,ug N m-3,daily,EMEP,air+aerosol
+64,concNtno3,DE0002R,Waldhof,52.802222,10.759444,77.8,ug N m-3,daily,EMEP,air+aerosol
+65,concNtno3,DE0001R,Westerland,54.925556,8.309722,12.0,ug N m-3,daily,EMEP,air+aerosol
+66,concNtno3,ES0012R,Zarra,39.08278,-1.10111,885.0,ug N m-3,daily,EMEP,air+aerosol
+67,concNtno3,DE0009R,Zingst,54.4368,12.7249,1.0,ug N m-3,daily,EMEP;EMEP HELCOM,air+aerosol
+68,concNtno3,LV0016R,Zoseni,57.135278,25.905556,188.0,ug N m-3,daily,EMEP;EMEP HELCOM,air+aerosol
+69,concNtno3,FI0037R,Ähtäri II,62.583333,24.183333,180.0,ug N m-3,monthly,EMEP,air+aerosol

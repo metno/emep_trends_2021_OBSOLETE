@@ -1,1 +1,129 @@
 ,var,station_id,station_name,latitude,longitude,altitude,unit,freq,framework,matrix
+0,concso2,GE0001R,Abastumani,41.755053,42.825333,1650.0,ug m-3,daily,EMEP,air
+1,concso2,CY0002R,Agia Marina Xyliatou ; Cyprus Atmospheric Observatory,35.0381,33.0578,523.0,ug m-3,daily,EMEP,air
+2,concso2,GR0001R,Aliartos,38.366667,23.083333,110.0,ug m-3,daily,EMEP,air
+3,concso2,AM0001R,Amberd,40.38444444,44.260583333,2080.0,ug m-3,daily,EMEP,air
+4,concso2,DK0008R,Anholt,56.716667,11.516667,40.0,ug m-3,daily,EMEP,air
+5,concso2,SE0012R,Aspvreten,58.8,17.383333,20.0,ug m-3,daily,EMEP HELCOM;EMEP HELCOM_preliminary,air
+6,concso2,GB0048R,Auchencorth Moss,55.79216,-3.2429,260.0,ug m-3,daily,EMEP;EMEP CAMP,air
+7,concso2,ES0011R,Barcarrota,38.47278,-6.92361,393.0,ug m-3,daily,EMEP,air
+8,concso2,GB0007R,Barcombe Mills,50.866667,-0.033056,8.0,ug m-3,monthly,EMEP,air
+9,concso2,NL0008R,Bilthoven,52.116667,5.2,5.0,ug m-3,daily,EMEP,air
+10,concso2,DE0005R,Brotjacklriegel,48.819444,13.219167,1016.0,ug m-3,daily,EMEP,air
+11,concso2,NL0644R,Cabauw Wielsekade,51.974444,4.923611,3.0,ug m-3,daily,EMEP,air
+12,concso2,NL0011R,Cabauw Zijdeweg,51.970278,4.926389,1.0,ug m-3,daily,EMEP,air
+13,concso2,ES0010R,Cabo de Creus,42.31917,3.31583,76.0,ug m-3,daily,EMEP,air
+14,concso2,ES0009R,Campisabalos,41.27417,-3.1425,1360.0,ug m-3,daily,EMEP,air
+15,concso2,CH0004R,Chaumont,47.049722,6.979444,1137.0,ug m-3,daily,EMEP,air
+16,concso2,GB1055R,Chilbolton Observatory,51.149617,-1.438228,78.0,ug m-3,daily,EMEP,air
+17,concso2,SK0002R,Chopok,48.933333,19.583333,2008.0,ug m-3,daily,EMEP,air
+18,concso2,CZ0005R,Churanov,49.066667,13.6,1118.0,ug m-3,daily,EMEP,air
+19,concso2,TR0001R,Cubuk II,40.5,33.0,1169.0,ug m-3,daily,EMEP,air
+20,concso2,RU0018R,Danki,54.9,37.8,150.0,ug m-3,daily,EMEP,air
+21,concso2,NL0091R,De Zilk,52.3,4.5,6.0,ug m-3,daily,EMEP,air
+22,concso2,DE0004R,Deuselbach,49.764722,7.051944,480.0,ug m-3,daily,EMEP,air
+23,concso2,PL0005R,Diabla Gora,54.15,22.066667,161.35,ug m-3,daily,EMEP,air
+24,concso2,FR0008R,Donon,48.5,7.133333,775.0,ug m-3,daily,EMEP,air
+25,concso2,ES0017R,Doñana,37.05194,-6.55528,35.0,ug m-3,daily,EMEP;EMEP CAMP,air
+26,concso2,NL0007R,Eibergen,52.083333,6.566667,22.0,ug m-3,daily,EMEP,air
+27,concso2,ES0014R,Els Torms,41.39389,0.73472,470.0,ug m-3,daily,EMEP,air
+28,concso2,GB0002R,Eskdalemuir,55.313056,-3.204167,243.0,ug m-3,monthly,EMEP,air
+29,concso2,HU0003R,Farkasfa,46.91,16.32,314.0,ug m-3,daily,EMEP,air
+30,concso2,MT0001R,Giordan Lighthouse,36.0722,14.2184,167.0,ug m-3,daily,EMEP GAW-WDCRG;EMEP GAW-WDCRG ACTRIS,air
+31,concso2,GB0016R,Glen Dye,56.9675,-2.588889,85.0,ug m-3,monthly,EMEP,air
+32,concso2,SE0020R,Hallahus,56.0429,13.148,190.0,ug m-3,daily,EMEP HELCOM,air
+33,concso2,GB0036R,Harwell,51.573056,-1.316667,137.0,ug m-3,daily,EMEP;EMEP CAMP,air
+34,concso2,GB0014R,High Muffles,54.334444,-0.8075,267.0,ug m-3,monthly,EMEP,air
+35,concso2,SE0008R,Hoburgen,56.916667,18.15,58.0,ug m-3,daily,EMEP HELCOM,air
+36,concso2,NO0056R,Hurdal,60.372386,11.078142,300.0,ug m-3,daily,EMEP NILU,air
+37,concso2,FI0050R,Hyytiälä,61.85,24.283333,184.0,ug m-3,monthly,EMEP,air
+38,concso2,AT0002R,Illmitz,47.7666664124,16.7666664124,117.0,ug m-3,daily,EMEP,air
+39,concso2,IS0002R,Irafoss,64.083333,-21.016667,66.0,ug m-3,daily,EMEP,air
+40,concso2,FR0012R,Iraty,43.033333,-1.083333,1300.0,ug m-3,daily,EMEP,air
+41,concso2,SI0008R,Iskrba,45.566667,14.866667,525.0,ug m-3,daily,EMEP GAW-WDCRG,air
+42,concso2,IT0004R,Ispra,45.8,8.633333,215.5,ug m-3,daily,EMEP,air
+43,concso2,PL0002R,Jarczew,51.814408,21.972419,182.24,ug m-3,daily,EMEP GAW-WDCA,air
+44,concso2,CH0001G,Jungfraujoch,46.5475,7.985,3578.0,ug m-3,daily,EMEP;EMEP GAW-WDCRG,air
+45,concso2,HU0002R,K-puszta,46.966667,19.583333,128.0,ug m-3,daily,EMEP,air
+46,concso2,RS0005R,Kamenicki vis,43.4,21.95,813.0,ug m-3,daily,EMEP,air
+47,concso2,DK0005R,Keldsnor,54.746495,10.73616,10.0,ug m-3,daily,EMEP;EMEP HELCOM,air
+48,concso2,NL0009R,Kollumerwaard,53.333889,6.277222,3.0,ug m-3,daily,EMEP GAW-WDCRG,air
+49,concso2,CZ0003R,Kosetice (NOAK),49.573394,15.080278,535.0,ug m-3,daily,EMEP GAW-WDCRG;ACTRIS EMEP GAW-WDCRG,air
+50,concso2,FR0003R,La Crouzille,46.133333,1.383333,497.0,ug m-3,daily,EMEP,air
+51,concso2,FR0005R,La Hague,49.616667,-1.833333,133.0,ug m-3,daily,EMEP,air
+52,concso2,FR0015R,La Tardière,46.65,-0.75,133.0,ug m-3,monthly,EMEP,air
+53,concso2,GB0037R,Ladybower Res.,53.398889,-1.753333,420.0,ug m-3,daily,EMEP,air
+54,concso2,EE0009R,Lahemaa,59.5,25.9,32.0,ug m-3,daily,EMEP;EMEP HELCOM,air
+55,concso2,MK0007R,Lazaropole,41.536111,20.69389,1332.0,ug m-3,daily,EMEP,air
+56,concso2,FR0016R,Le Casset,45.0,6.466667,1750.0,ug m-3,daily,EMEP,air
+57,concso2,PL0004R,Leba,54.753894,17.534264,5.0,ug m-3,daily,EMEP GAW-WDCA;EMEP HELCOM,air
+58,concso2,MD0013R,Leova II,46.4884,28.2835,166.0,ug m-3,daily,EMEP,air
+59,concso2,RU0020R,Lesnoy,56.53,32.94,340.0,ug m-3,monthly,EMEP,air
+60,concso2,SK0005R,Liesek,49.366667,19.683333,892.0,ug m-3,daily,EMEP,air
+61,concso2,ES0004R,Logroño,42.457778,-2.503056,445.0,ug m-3,daily,EMEP,air
+62,concso2,GB0038R,Lullington Heath,50.792778,0.179444,120.0,ug m-3,daily,EMEP,air
+63,concso2,ES0006R,Mahón,39.87528,4.31639,78.0,ug m-3,daily,EMEP,air
+64,concso2,FR0014R,Montandon,47.3,6.833333,836.0,ug m-3,daily,EMEP,air
+65,concso2,IT0001R,Montelibretti,42.1,12.633333,48.0,ug m-3,daily,EMEP,air
+66,concso2,FR0017R,Montfranc,45.8,2.066667,810.0,ug m-3,daily,EMEP,air
+67,concso2,FR0010R,Morvan,47.266667,4.083333,620.0,ug m-3,daily,EMEP,air
+68,concso2,IT0009R,Mt Cimone,44.183333,10.7,2172.0,ug m-3,daily,EMEP GAW-WDCRG,air
+69,concso2,GB0043R,Narberth,51.781784,-4.691462,160.0,ug m-3,daily,EMEP,air
+70,concso2,DE0007R,Neuglobsow,53.166667,13.033333,65.5,ug m-3,daily,EMEP,air
+71,concso2,ES0005R,Noia,42.72056,-8.92361,683.0,ug m-3,daily,EMEP,air
+72,concso2,SE0022R,Norunda Stenen,60.0858,17.50528,45.0,ug m-3,daily,EMEP HELCOM,air
+73,concso2,ES0016R,O Saviñao,42.63472,-7.70472,506.0,ug m-3,daily,EMEP,air
+74,concso2,NO0041R,Osen,61.25,11.783333,440.0,ug m-3,daily,EMEP NILU,air
+75,concso2,FI0022R,Oulanka,66.320278,29.401667,310.0,ug m-3,monthly,EMEP;EMEP AMAP,air
+76,concso2,FI0036R,Pallas (Matorova),68.0,24.237222222,340.0,ug m-3,daily,EMEP,air
+77,concso2,CH0002R,Payerne,46.813056,6.944722,489.0,ug m-3,daily,EMEP;EMEP GAW-WDCRG,air
+78,concso2,ES0013R,Penausende,41.23889,-5.8975,985.0,ug m-3,daily,EMEP,air
+79,concso2,FR0013R,Peyrusse Vieille,43.616667,0.183333,200.0,ug m-3,monthly,EMEP,air
+80,concso2,AT0030R,Pillersdorf bei Retz,48.721111,15.942222,315.0,ug m-3,daily,EMEP,air
+81,concso2,RO0008R,Poiana Stampei,47.324792,25.134664,908.0,ug m-3,daily,EMEP,air
+82,concso2,LT0015R,Preila,55.3761111111,21.0305555556,7.0,ug m-3,daily,EMEP;EMEP HELCOM,air
+83,concso2,FR0030R,Puy de Dôme,45.772223,2.964886,1465.0,ug m-3,daily,EMEP,air
+84,concso2,FR0009R,Revin,49.9,4.633333,390.0,ug m-3,monthly,EMEP,air
+85,concso2,CH0005R,Rigi,47.0675,8.463889,1031.0,ug m-3,daily,EMEP;EMEP GAW-WDCRG,air
+86,concso2,ES0015R,Risco Llamo,39.516667,-4.35,1241.0,ug m-3,daily,EMEP,air
+87,concso2,DK0012R,Risoe,55.693588,12.085797,3.0,ug m-3,daily,EMEP,air
+88,concso2,ES0003R,Roquetas,40.820556,0.491389,44.0,ug m-3,daily,EMEP,air
+89,concso2,LV0010R,Rucava,56.161944,21.173056,19.8,ug m-3,daily,EMEP GAW-WDCA;EMEP HELCOM,air
+90,concso2,ES0001R,San Pablo de los Montes,39.54694,-4.35056,917.0,ug m-3,daily,EMEP,air
+91,concso2,DE0003R,Schauinsland,47.914722,7.908611,1208.5,ug m-3,daily,EMEP,air
+92,concso2,DE0008R,Schmücke,50.65,10.766667,953.0,ug m-3,daily,EMEP,air
+93,concso2,RU0016R,Shepeljovo,59.966667,29.116667,4.0,ug m-3,daily,EMEP HELCOM,air
+94,concso2,NO0008R,Skreådalen,58.816667,6.716667,475.0,ug m-3,daily,EMEP NILU,air
+95,concso2,PL0003R,Sniezka,50.736444,15.7395,1607.5,ug m-3,daily,EMEP GAW-WDCA,air
+96,concso2,AT0004R,St. Koloman,47.65,13.2,851.0,ug m-3,daily,EMEP,air
+97,concso2,SK0006R,Starina,49.05,22.266667,345.0,ug m-3,daily,EMEP,air
+98,concso2,SK0004R,Stará Lesná,49.15,20.283333,808.0,ug m-3,daily,EMEP,air
+99,concso2,GB0004R,Stoke Ferry,52.566667,0.5,15.0,ug m-3,monthly,EMEP,air
+100,concso2,GB0015R,Strath Vaich Dam,57.734444,-4.774444,270.0,ug m-3,monthly,EMEP,air
+101,concso2,CZ0001R,Svratouch,49.735084444,16.034196944,735.0,ug m-3,daily,EMEP,air
+102,concso2,DK0003R,Tange,56.35,9.6,13.0,ug m-3,daily,EMEP,air
+103,concso2,SK0007R,Topolniky,47.96,17.860556,113.0,ug m-3,daily,EMEP,air
+104,concso2,IE0002R,Turlough Hill,53.036667,-6.4,420.0,ug m-3,daily,EMEP,air
+105,concso2,NO0015R,Tustervatn,65.833333,13.916667,439.0,ug m-3,daily,EMEP NILU,air
+106,concso2,CH0003R,Tänikon,47.479722,8.904722,539.0,ug m-3,daily,EMEP,air
+107,concso2,DK0031R,Ulborg,56.290424,8.427486,10.0,ug m-3,daily,EMEP,air
+108,concso2,FI0009R,Utö,59.779167,21.377222,7.0,ug m-3,daily,EMEP;EMEP HELCOM;EMEP_preliminary HELCOM,air
+109,concso2,IE0001R,Valentia Observatory,51.939722,-10.244444,13.0,ug m-3,daily,EMEP CAMP,air
+110,concso2,SE0011R,Vavihill,56.016667,13.15,175.0,ug m-3,daily,EMEP HELCOM,air
+111,concso2,FR0001R,Vert-le-Petit,48.533333,2.366667,64.0,ug m-3,daily,EMEP,air
+112,concso2,EE0011R,Vilsandi,58.383333,21.816667,6.0,ug m-3,daily,EMEP,air
+113,concso2,FI0017R,Virolahti II,60.526667,27.686111,4.0,ug m-3,daily,EMEP;EMEP HELCOM,air
+114,concso2,FI0018R,Virolahti III,60.53002,27.66754,7.0,ug m-3,daily,EMEP_preliminary HELCOM,air
+115,concso2,AT0005R,Vorhegg,46.677778,12.972222,1020.0,ug m-3,daily,EMEP,air
+116,concso2,NL0010R,Vredepeel,51.541111,5.853611,28.0,ug m-3,daily,EMEP,air
+117,concso2,ES0007R,Víznar,37.23722,-3.53417,1230.0,ug m-3,daily,EMEP,air
+118,concso2,DE0002R,Waldhof,52.802222,10.759444,77.8,ug m-3,daily,EMEP,air
+119,concso2,DE0001R,Westerland,54.925556,8.309722,22.5,ug m-3,daily,EMEP,air
+120,concso2,GB0045R,Wicken Fen,52.298333,0.292778,5.0,ug m-3,daily,EMEP,air
+121,concso2,GB0013R,Yarner Wood,50.596389,-3.713056,119.0,ug m-3,monthly,EMEP,air
+122,concso2,ME0008R,Zabljak,43.15,19.133333,1450.0,ug m-3,daily,EMEP,air
+123,concso2,ES0012R,Zarra,39.08278,-1.10111,885.0,ug m-3,daily,EMEP,air
+124,concso2,DE0009R,Zingst,54.4368,12.7249,9.0,ug m-3,daily,EMEP;EMEP HELCOM,air
+125,concso2,AT0048R,Zoebelboden,47.838611,14.441389,899.0,ug m-3,daily,EMEP,air
+126,concso2,LV0016R,Zoseni,57.135278,25.905556,188.0,ug m-3,daily,EMEP;EMEP HELCOM,air
+127,concso2,FI0037R,Ähtäri II,62.583333,24.183333,180.0,ug m-3,monthly,EMEP,air

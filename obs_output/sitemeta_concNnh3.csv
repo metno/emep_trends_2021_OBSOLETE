@@ -1,1 +1,59 @@
 ,var,station_id,station_name,latitude,longitude,altitude,unit,freq,framework,matrix
+0,concNnh3,GE0001R,Abastumani,41.755053,42.825333,1650.0,ug N m-3,daily,EMEP,air
+1,concNnh3,AM0001R,Amberd,40.38444444,44.260583333,2080.0,ug N m-3,daily,EMEP,air
+2,concNnh3,DK0008R,Anholt,56.716667,11.516667,40.0,ug N m-3,daily,EMEP,air
+3,concNnh3,SE0012R,Aspvreten,58.8,17.383333,20.0,ug N m-3,daily,EMEP HELCOM,air
+4,concNnh3,GB0048R,Auchencorth Moss,55.79216,-3.2429,260.0,ug N m-3,daily,EMEP;EMEP CAMP,air
+5,concNnh3,ES0011R,Barcarrota,38.47278,-6.92361,393.0,ug N m-3,monthly,EMEP,air
+6,concNnh3,CH0053R,Beromünster,47.18961391,8.175433684,797.0,ug N m-3,monthly,EMEP,air
+7,concNnh3,ES0009R,Campisabalos,41.27417,-3.1425,1360.0,ug N m-3,monthly,EMEP,air
+8,concNnh3,GB1055R,Chilbolton Observatory,51.149617,-1.438228,78.0,ug N m-3,daily,EMEP,air
+9,concNnh3,TR0001R,Cubuk II,40.5,33.0,1169.0,ug N m-3,daily,EMEP,air
+10,concNnh3,NL0091R,De Zilk,52.3,4.5,6.0,ug N m-3,daily,EMEP CAMP,air
+11,concNnh3,PL0005R,Diabla Gora,54.15,22.066667,159.45,ug N m-3,daily,EMEP,air
+12,concNnh3,NL0007R,Eibergen,52.083333,6.566667,20.0,ug N m-3,daily,EMEP,air
+13,concNnh3,ES0014R,Els Torms,41.39389,0.73472,470.0,ug N m-3,monthly,EMEP,air
+14,concNnh3,HU0003R,Farkasfa,46.91,16.32,314.0,ug N m-3,daily,EMEP,air
+15,concNnh3,SE0020R,Hallahus,56.0429,13.148,190.0,ug N m-3,monthly,EMEP HELCOM,air
+16,concNnh3,GB0036R,Harwell,51.573056,-1.316667,137.0,ug N m-3,daily,EMEP;EMEP CAMP,air
+17,concNnh3,NO0056R,Hurdal,60.372386,11.078142,300.0,ug N m-3,daily,EMEP NILU,air
+18,concNnh3,FI0050R,Hyytiälä,61.85,24.283333,184.0,ug N m-3,monthly,EMEP,air
+19,concNnh3,AT0002R,Illmitz,47.7666664124,16.7666664124,117.0,ug N m-3,daily,EMEP,air
+20,concNnh3,SI0008R,Iskrba,45.566667,14.866667,525.0,ug N m-3,daily,EMEP,air
+21,concNnh3,HU0002R,K-puszta,46.966667,19.583333,128.0,ug N m-3,daily,EMEP,air
+22,concNnh3,DK0005R,Keldsnor,54.746495,10.73616,10.0,ug N m-3,daily,EMEP,air
+23,concNnh3,CZ0003R,Kosetice (NOAK),49.573394,15.080278,535.0,ug N m-3,daily,EMEP,air
+24,concNnh3,FR0015R,La Tardière,46.65,-0.75,133.0,ug N m-3,daily,EMEP,air
+25,concNnh3,MD0013R,Leova II,46.4884,28.2835,166.0,ug N m-3,daily,EMEP,air
+26,concNnh3,IT0001R,Montelibretti,42.1,12.633333,48.0,ug N m-3,daily,EMEP,air
+27,concNnh3,ES1778R,Montseny,41.766667,2.35,700.0,ug N m-3,daily,EMEP EUSAAR GAW-WDCA,air
+28,concNnh3,DE0007R,Neuglobsow,53.166667,13.033333,64.0,ug N m-3,monthly,EMEP,air
+29,concNnh3,SE0022R,Norunda Stenen,60.0858,17.50528,45.0,ug N m-3,daily,EMEP HELCOM,air
+30,concNnh3,NO0041R,Osen,61.25,11.783333,440.0,ug N m-3,daily,EMEP NILU,air
+31,concNnh3,FI0022R,Oulanka,66.320278,29.401667,310.0,ug N m-3,monthly,EMEP,air
+32,concNnh3,FI0036R,Pallas (Matorova),68.0,24.237222222,340.0,ug N m-3,daily,EMEP,air
+33,concNnh3,CH0002R,Payerne,46.813056,6.944722,489.0,ug N m-3,monthly,EMEP,air
+34,concNnh3,FR0013R,Peyrusse Vieille,43.616667,0.183333,200.0,ug N m-3,daily,EMEP,air
+35,concNnh3,FR0009R,Revin,49.9,4.633333,390.0,ug N m-3,daily,EMEP,air
+36,concNnh3,CH0005R,Rigi,47.0675,8.463889,1031.0,ug N m-3,monthly,EMEP,air
+37,concNnh3,DK0012R,Risoe,55.693588,12.085797,3.0,ug N m-3,daily,EMEP,air
+38,concNnh3,LV0010R,Rucava,56.161944,21.173056,19.8,ug N m-3,daily,EMEP GAW-WDCA,air
+39,concNnh3,ES0001R,San Pablo de los Montes,39.54694,-4.35056,917.0,ug N m-3,monthly,EMEP,air
+40,concNnh3,DE0003R,Schauinsland,47.914722,7.908611,1207.0,ug N m-3,monthly,EMEP,air
+41,concNnh3,DE0008R,Schmücke,50.65,10.766667,939.0,ug N m-3,monthly,EMEP,air
+42,concNnh3,NO0008R,Skreådalen,58.816667,6.716667,475.0,ug N m-3,daily,EMEP NILU,air
+43,concNnh3,SK0006R,Starina,49.05,22.266667,345.0,ug N m-3,daily,EMEP,air
+44,concNnh3,SK0004R,Stará Lesná,49.15,20.283333,808.0,ug N m-3,daily,EMEP,air
+45,concNnh3,CZ0001R,Svratouch,49.735084444,16.034196944,735.0,ug N m-3,daily,EMEP,air
+46,concNnh3,DK0003R,Tange,56.35,9.6,13.0,ug N m-3,daily,EMEP,air
+47,concNnh3,NO0015R,Tustervatn,65.833333,13.916667,439.0,ug N m-3,daily,EMEP NILU,air
+48,concNnh3,DK0031R,Ulborg,56.290424,8.427486,10.0,ug N m-3,daily,EMEP,air
+49,concNnh3,FI0009R,Utö,59.779167,21.377222,7.0,ug N m-3,daily,EMEP;EMEP_preliminary HELCOM,air
+50,concNnh3,SE0011R,Vavihill,56.016667,13.15,175.0,ug N m-3,daily,EMEP HELCOM,air
+51,concNnh3,FI0017R,Virolahti II,60.526667,27.686111,4.0,ug N m-3,daily,EMEP,air
+52,concNnh3,FI0018R,Virolahti III,60.53002,27.66754,7.0,ug N m-3,daily,EMEP_preliminary HELCOM,air
+53,concNnh3,ES0007R,Víznar,37.23722,-3.53417,1230.0,ug N m-3,monthly,EMEP,air
+54,concNnh3,DE0002R,Waldhof,52.802222,10.759444,76.0,ug N m-3,monthly,EMEP,air
+55,concNnh3,DE0001R,Westerland,54.925556,8.309722,12.0,ug N m-3,daily,EMEP,air
+56,concNnh3,DE0009R,Zingst,54.4368,12.7249,3.0,ug N m-3,monthly,EMEP HELCOM,air
+57,concNnh3,FI0037R,Ähtäri II,62.583333,24.183333,180.0,ug N m-3,monthly,EMEP,air

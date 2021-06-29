@@ -7,8 +7,8 @@ Created on Wed Jun 23 10:17:17 2021
 """
 import os, shutil, glob
 
-ALL_EBAS_VARS = ['concNno2',
-                 'concno',
+ALL_EBAS_VARS = ['vmrno2',
+                 'vmrno',
                  #'vmrox',
                  'concso2',
                  'concco',
@@ -34,7 +34,7 @@ ALL_EBAS_VARS = ['concNno2',
                  'wetrdn',
                  'wetoxn',
                  'pr',
-                 'concisop',
+                 'vmrisop',
                  'concglyoxal',
                  'conchcho'
                  ]

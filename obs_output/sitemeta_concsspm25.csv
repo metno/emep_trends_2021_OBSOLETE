@@ -1,1 +1,35 @@
 ,var,station_id,station_name,latitude,longitude,altitude,unit,freq,framework,matrix
+0,concsspm25,CY0002R,Agia Marina Xyliatou ; Cyprus Atmospheric Observatory,35.0381,33.0578,520.0,ug m-3,daily,EMEP,pm25
+1,concsspm25,GB0048R,Auchencorth Moss,55.79216,-3.2429,260.0,ug m-3,daily,EMEP;EMEP CAMP,pm25
+2,concsspm25,NL0644R,Cabauw Wielsekade,51.974444,4.923611,3.0,ug m-3,daily,EMEP,pm25
+3,concsspm25,ES0009R,Campisabalos,41.27417,-3.1425,1360.0,ug m-3,daily,EMEP,pm25
+4,concsspm25,GB1055R,Chilbolton Observatory,51.149617,-1.438228,78.0,ug m-3,daily,EMEP,pm25
+5,concsspm25,PL0005R,Diabla Gora,54.15,22.066667,159.0,ug m-3,monthly,EMEP,pm25
+6,concsspm25,FR0008R,Donon,48.5,7.133333,775.0,ug m-3,daily,EMEP,pm25
+7,concsspm25,ES0014R,Els Torms,41.39389,0.73472,470.0,ug m-3,daily,EMEP,pm25
+8,concsspm25,FR0024R,Guipry,47.831888889,-1.836333333,29.45,ug m-3,daily,EMEP,pm25
+9,concsspm25,GB0036R,Harwell,51.573056,-1.316667,137.0,ug m-3,daily,EMEP;EMEP CAMP,pm25
+10,concsspm25,AT0002R,Illmitz,47.7666664124,16.7666664124,117.0,ug m-3,daily,EMEP,pm25
+11,concsspm25,SI0008R,Iskrba,45.566667,14.866667,525.0,ug m-3,daily,EMEP,pm25
+12,concsspm25,IT0004R,Ispra,45.8,8.633333,215.5,ug m-3,daily,EMEP,pm25
+13,concsspm25,CZ0003R,Kosetice (NOAK),49.573394,15.080278,535.0,ug m-3,monthly,EMEP,pm25
+14,concsspm25,DE0044R,Melpitz,51.53014,12.93386,86.0,ug m-3,daily,EMEP,pm25
+15,concsspm25,ES1778R,Montseny,41.766667,2.35,700.0,ug m-3,daily,EMEP;EMEP EUSAAR GAW-WDCA;ACTRIS EMEP GAW-WDCA,pm25
+16,concsspm25,DE0007R,Neuglobsow,53.166667,13.033333,63.6,ug m-3,daily,EMEP,pm25
+17,concsspm25,FI0036R,Pallas (Matorova),68.0,24.237222222,340.0,ug m-3,monthly,EMEP,pm25
+18,concsspm25,FR0013R,Peyrusse Vieille,43.616667,0.183333,200.0,ug m-3,daily,EMEP,pm25
+19,concsspm25,FR0009R,Revin,49.9,4.633333,390.0,ug m-3,daily,EMEP,pm25
+20,concsspm25,LV0010R,Rucava,56.161944,21.173056,21.0,ug m-3,monthly,EMEP GAW-WDCA,pm25
+21,concsspm25,FR0023R,Saint-Nazaire-le-Désert,44.569444444,5.278972222,605.0,ug m-3,daily,EMEP,pm25
+22,concsspm25,ES0001R,San Pablo de los Montes,39.54694,-4.35056,917.0,ug m-3,daily,EMEP,pm25
+23,concsspm25,DE0003R,Schauinsland,47.914722,7.908611,1206.6,ug m-3,daily,EMEP,pm25
+24,concsspm25,DE0008R,Schmücke,50.65,10.766667,938.6,ug m-3,daily,EMEP,pm25
+25,concsspm25,FI0009R,Utö,59.779167,21.377222,7.0,ug m-3,monthly,EMEP,pm25
+26,concsspm25,FR0025R,Verneuil,46.814727778,2.610008333,182.0,ug m-3,daily,EMEP,pm25
+27,concsspm25,FI0017R,Virolahti II,60.526667,27.686111,4.0,ug m-3,monthly,EMEP,pm25
+28,concsspm25,ES0007R,Víznar,37.23722,-3.53417,1230.0,ug m-3,daily,EMEP,pm25
+29,concsspm25,DE0002R,Waldhof,52.802222,10.759444,75.6,ug m-3,daily,EMEP,pm25
+30,concsspm25,DE0001R,Westerland,54.925556,8.309722,13.6,ug m-3,daily,EMEP,pm25
+31,concsspm25,PL0009R,Zielonka,53.662117,17.934017,123.0,ug m-3,monthly,EMEP,pm25
+32,concsspm25,DE0009R,Zingst,54.4368,12.7249,2.6,ug m-3,daily,EMEP;EMEP HELCOM,pm25
+33,concsspm25,LV0016R,Zoseni,57.135278,25.905556,188.0,ug m-3,monthly,EMEP,pm25

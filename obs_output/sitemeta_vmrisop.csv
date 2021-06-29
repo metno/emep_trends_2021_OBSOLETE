@@ -1,0 +1,24 @@
+,var,station_id,station_name,latitude,longitude,altitude,unit,freq,framework,matrix
+0,vmrisop,GB0048R,Auchencorth Moss,55.79216,-3.2429,260.0,nmol mol-1,daily,EMEP,air
+1,vmrisop,CH0053R,Beromünster,47.18961391,8.175433684,802.0,nmol mol-1,daily,ACTRIS EMEP GAW-WDCRG,air
+2,vmrisop,NO0001R;NO0002R,Birkenes II,58.383333,8.25,190.0,nmol mol-1,daily,EMEP NILU;ACTRIS EMEP,air
+3,vmrisop,DE0005R,Brotjacklriegel,48.819444,13.219167,1016.0,nmol mol-1,daily,EMEP,air
+4,vmrisop,FR0008R,Donon,48.5,7.133333,775.0,nmol mol-1,daily,EMEP,air
+5,vmrisop,FR0033R,Ersa (Cape Corsica),42.9694,9.3803,537.0,nmol mol-1,daily,ACTRIS EMEP GAW-WDCRG,air
+6,vmrisop,GB0036R,Harwell,51.573056,-1.316667,137.0,nmol mol-1,daily,EMEP,air
+7,vmrisop,DE0043G,Hohenpeissenberg,47.8014984131,11.009619,990.0,nmol mol-1,daily,ACTRIS EMEP GAW-WDCRG;ACTRIS EMEP GAW-WDCGG-node,air
+8,vmrisop,FI0050R,Hyytiälä,61.85,24.283333,377.8,nmol mol-1,daily,ACTRIS EMEP GAW-WDCRG,air
+9,vmrisop,NL0009R,Kollumerwaard,53.333889,6.277222,1.0,nmol mol-1,daily,EMEP,air
+10,vmrisop,CZ0003R,Kosetice (NOAK),49.573394,15.080278,535.0,nmol mol-1,daily,EMEP;ACTRIS EMEP GAW-WDCRG;ACTRIS EMEP GAW-WDCGG-node,air
+11,vmrisop,CZ0099R,Libus,50.15,15.066667,,nmol mol-1,daily,EMEP,air
+12,vmrisop,DE0007R,Neuglobsow,53.166667,13.033333,68.2,nmol mol-1,daily,EMEP;EMEP GAW-WDCRG,air
+13,vmrisop,FI0096G,Pallas (Sammaltunturi),67.973333333,24.116111111,569.0,nmol mol-1,daily,ACTRIS AMAP EMEP GAW-WDCRG,air
+14,vmrisop,CH0005R,Rigi,47.0675,8.463889,1035.0,nmol mol-1,daily,ACTRIS EMEP GAW-WDCRG,air
+15,vmrisop,DE0003R,Schauinsland,47.914722,7.908611,1217.0,nmol mol-1,daily,EMEP;EMEP GAW-WDCRG,air
+16,vmrisop,DE0008R,Schmücke,50.65,10.766667,953.0,nmol mol-1,daily,EMEP;EMEP GAW-WDCRG,air
+17,vmrisop,SK0006R,Starina,49.05,22.266667,345.0,nmol mol-1,daily,EMEP,air
+18,vmrisop,FI0009R,Utö,59.779167,21.377222,7.0,nmol mol-1,daily,EMEP,air
+19,vmrisop,DE0002R,Waldhof,52.802222,10.759444,81.0,nmol mol-1,daily,EMEP;ACTRIS EMEP GAW-WDCRG,air
+20,vmrisop,NO0042G,Zeppelin mountain (Ny-Ålesund),78.90715,11.88668,474.0,nmol mol-1,daily,EMEP NILU GAW-WDCRG,air
+21,vmrisop,DE0009R,Zingst,54.4368,12.7249,9.0,nmol mol-1,daily,EMEP;EMEP GAW-WDCRG,air
+22,vmrisop,DE0054R,Zugspitze-Schneefernerhaus,47.4165,10.97964,2676.0,nmol mol-1,daily,EMEP;EMEP GAW-WDCRG;ACTRIS GAW-WDCRG,air
