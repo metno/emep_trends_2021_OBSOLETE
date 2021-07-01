@@ -32,16 +32,13 @@ PERIODS = [(2000, 2019, 14),
            (2005, 2019,10),]
 
 EBAS_VARS = [
-            'vmrno2',
-            'vmrno',
-            # 'vmrox',
+            'concno2',
             'concso2',
             'concco',
             'vmrc2h6',
             'vmrc2h4',
             'concpm25',
             'concpm10',
-            #'conco3',
             'concso4',
             'concNtno3',
             'concNtnh',
@@ -85,6 +82,7 @@ if __name__ == '__main__':
     start_yr, stop_yr = get_first_last_year(PERIODS)
 
     oreader = pya.io.ReadUngridded(EBAS_ID, data_dirs=data_dir)
+    #mreader = pya.io.ReadGMscwCtm
 
 
     for var in EBAS_VARS:
