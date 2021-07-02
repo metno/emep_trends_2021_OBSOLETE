@@ -14,6 +14,7 @@ from pyaerocom.trends_helpers import SEASONS
 from helper_functions import (delete_outdated_output, clear_obs_output,
                               get_first_last_year)
 from read_mods import (read_model,dummy,not_implemented)
+import cube_read_methods as cm
 
 from variables import ALL_EBAS_VARS
 
@@ -23,6 +24,9 @@ EBAS_LOCAL = '/home/jonasg/MyPyaerocom/data/obsdata/EBASMultiColumn/data'
 EBAS_ID = 'EBASMC'
 
 DEFAULT_RESAMPLE_CONSTRAINTS = dict(monthly     =   dict(daily      = 21),
+                                    daily       =   dict(hourly     = 18))
+
+RELAXED_RESAMPLE_CONSTRAINTS =  dict(monthly     =   dict(daily      = 4, weekly = 2),
                                     daily       =   dict(hourly     = 18))
 
 DEFAULT_RESAMPLE_HOW = 'mean'
@@ -40,8 +44,8 @@ EBAS_VARS = [
             # 'vmrc2h4',
             # 'concpm25',
             # 'concpm10',
-            'concso4',
-            # 'concNtno3',
+            # 'concso4',
+            'concNtno3',
             # 'concNtnh',
             # 'concNnh3',
             # 'concNnh4',
@@ -74,11 +78,18 @@ EMEP_VAR_INFO = {'concpm10':{'units':'ug m-3','data_freq':'day'},
             'concso4':{'units':'ug m-3','data_freq':'day'},
             'concox':{'units':'ug m-3','data_freq':'day'},
             'conco3':{'units':'ug m-3','data_freq':'day'},
+            'conchno3':{'units':'ug m-3','data_freq':'day'},
+            'concNtno3':{'units':'ug N m-3','data_freq':'day'},
+            'concno3c':{'units':'ug m-3','data_freq':'day'},
+            'concno3f':{'units':'ug m-3','data_freq':'day'},
             }
 CALCULATE_HOW = {'concox':{'req_vars':['conco3','concno2'],
                            'function':pya.io.aux_read_cubes.add_cubes},
                  'concNtno3':{'req_vars':['conchno3','concno3f','concno3c'],
-                              'function':not_implemented}}
+                              'function':cm.calc_concNtno3},
+                 'concNtnh':{'req_vars':['concnh3','concnh4'],
+                              'function':cm.calc_concNtnh}
+                 }
 
 HOSTNAME = socket.gethostname()
 
@@ -131,9 +142,9 @@ if __name__ == '__main__':
         mdata = read_model(var, PATHS, start_yr, stop_yr, EMEP_VAR_INFO,CALCULATE_HOW)
         
         #remove:
-        sitedata = data.to_station_data_all(var, start=int(start_yr)-1, stop=int(stop_yr)+1,
-                                            resample_how=DEFAULT_RESAMPLE_HOW,
-                                            min_num_obs=DEFAULT_RESAMPLE_CONSTRAINTS)
+        # sitedata = data.to_station_data_all(var, start=int(start_yr)-1, stop=int(stop_yr)+1,
+        #                                     resample_how=DEFAULT_RESAMPLE_HOW,
+        #                                     min_num_obs=DEFAULT_RESAMPLE_CONSTRAINTS)
         coldata = pya.colocation.colocate_gridded_ungridded(
                     mdata,data,ts_type='monthly',start=start_yr,stop=stop_yr,
                     colocate_time=True,resample_how=DEFAULT_RESAMPLE_HOW,

@@ -120,6 +120,9 @@ if __name__ == '__main__':
             'concox':{'units':'ug m-3','data_freq':'day'},
             'conco3':{'units':'ug m-3','data_freq':'day'},
             'conchno3':{'units':'ug m-3','data_freq':'day'},
+            'concNtno3':{'units':'ug N m-3','data_freq':'day'},
+            'concno3c':{'units':'ug m-3','data_freq':'day'},
+            'concno3f':{'units':'ug m-3','data_freq':'day'},
             }
 
     EMEP_VARS = [
