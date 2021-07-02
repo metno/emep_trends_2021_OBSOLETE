@@ -5,7 +5,7 @@ Created on Tue Jun 15 11:16:33 2021
 
 @author: jonasg
 """
-import os, tqdm
+import os, socket, tqdm
 import numpy as np
 import pandas as pd
 import pyaerocom as pya
@@ -13,6 +13,7 @@ from pyaerocom.trends_helpers import SEASONS
 
 from helper_functions import (delete_outdated_output, clear_obs_output,
                               get_first_last_year)
+from read_mods import (read_model,dummy,not_implemented)
 
 from variables import ALL_EBAS_VARS
 
@@ -32,39 +33,66 @@ PERIODS = [(2000, 2019, 14),
            (2005, 2019,10),]
 
 EBAS_VARS = [
-            'concno2',
-            'concso2',
-            'concco',
-            'vmrc2h6',
-            'vmrc2h4',
-            'concpm25',
-            'concpm10',
+            # 'concno2',
+            # 'concso2',
+            # 'concco',
+            # 'vmrc2h6',
+            # 'vmrc2h4',
+            # 'concpm25',
+            # 'concpm10',
             'concso4',
-            'concNtno3',
-            'concNtnh',
-            'concNnh3',
-            'concNnh4',
-            'concNhno3',
-            'concNno3pm25',
-            'concNno3pm10',
-            'concsspm25',
-            'concsspm10',
-            'concCecpm25',
-            'concCocpm25',
-            'conchcho',
-            'wetoxs',
-            'wetrdn',
-            'wetoxn',
-            'pr',
-            'vmrisop',
-            'concglyoxal',
-            'conchcho',
+            # 'concNtno3',
+            # 'concNtnh',
+            # 'concNnh3',
+            # 'concNnh4',
+            # 'concNhno3',
+            # 'concNno3pm25',
+            # 'concNno3pm10',
+            # 'concsspm25',
+            # 'concsspm10',
+            # 'concCecpm25',
+            # 'concCocpm25',
+            # 'conchcho',
+            # 'wetoxs',
+            # 'wetrdn',
+            # 'wetoxn',
+            # 'pr',
+            # 'vmrisop',
+            # 'concglyoxal',
+            # 'conchcho',
             ]
 EBAS_BASE_FILTERS = dict(set_flags_nan   = True,
                          #data_level      = 2
                            framework       = ['EMEP*', 'ACTRIS*'])
 
 OUTPUT_DIR = 'obs_output'
+MODEL_OUTPUT_DIR = 'mod_output'
+
+EMEP_VAR_INFO = {'concpm10':{'units':'ug m-3','data_freq':'day'},
+            'concpm25':{'units':'ug m-3','data_freq':'day'},
+            'concno2':{'units':'ug m-3','data_freq':'day'},
+            'concso4':{'units':'ug m-3','data_freq':'day'},
+            'concox':{'units':'ug m-3','data_freq':'day'},
+            'conco3':{'units':'ug m-3','data_freq':'day'},
+            }
+CALCULATE_HOW = {'concox':{'req_vars':['conco3','concno2'],
+                           'function':pya.io.aux_read_cubes.add_cubes},
+                 'concNtno3':{'req_vars':['conchno3','concno3f','concno3c'],
+                              'function':not_implemented}}
+
+HOSTNAME = socket.gethostname()
+
+if "pc53" in HOSTNAME:
+    preface = '/home/hansb'
+else:
+    preface = '/'
+       
+PATHS = {
+'1999-2016' : f'{preface}/lustre/storeB/project/fou/kl/emep/ModelRuns/2019_REPORTING/TRENDS/',
+'2017'      : f'{preface}/lustre/storeB/project/fou/kl/emep/ModelRuns/2019_REPORTING/EMEP01_L20EC_rv4_33.2017',
+'2018'      : f'{preface}/lustre/storeB/project/fou/kl/emep/ModelRuns/2020_REPORTING/EMEP01_rv4_35_2018_emepCRef2',
+'2019'      : f'{preface}/lustre/storeB/project/fou/kl/emep/ModelRuns/2020_REPORTING/EMEP01_rv4_35_2019_tnoCRef2'    
+}
 
 if __name__ == '__main__':
     if not os.path.exists(OUTPUT_DIR):
@@ -80,9 +108,10 @@ if __name__ == '__main__':
     delete_outdated_output(OUTPUT_DIR, ALL_EBAS_VARS)
 
     start_yr, stop_yr = get_first_last_year(PERIODS)
+    start_yr = '2015'; stop_yr = '2018'
 
     oreader = pya.io.ReadUngridded(EBAS_ID, data_dirs=data_dir)
-    #mreader = pya.io.ReadGMscwCtm
+    
 
 
     for var in EBAS_VARS:
@@ -92,90 +121,104 @@ if __name__ == '__main__':
         # delete former output for that variable if it exists
         clear_obs_output(OUTPUT_DIR, var)
         sitemeta = []
-        trendtab = []
+        obs_trendtab = []
+        mod_trendtab = []
 
         data = oreader.read(vars_to_retrieve=var)
         data = data.apply_filters(**EBAS_BASE_FILTERS)
         #data = data.apply_filters(station_name='Birkenes II')
 
-        #mdata = read_emep_dat(variable,start_yr,stop_yr,paths) -> pya.GriddedData
+        mdata = read_model(var, PATHS, start_yr, stop_yr, EMEP_VAR_INFO,CALCULATE_HOW)
         
         #remove:
         sitedata = data.to_station_data_all(var, start=int(start_yr)-1, stop=int(stop_yr)+1,
                                             resample_how=DEFAULT_RESAMPLE_HOW,
                                             min_num_obs=DEFAULT_RESAMPLE_CONSTRAINTS)
-        #coldata = pya.colocation.colocate_gridded_ungridded(mdata,data,ts_type='monthly',start,stop,colcate_time=True,resample_how,min_num_obs)
+        coldata = pya.colocation.colocate_gridded_ungridded(
+                    mdata,data,ts_type='monthly',start=start_yr,stop=stop_yr,
+                    colocate_time=True,resample_how=DEFAULT_RESAMPLE_HOW,
+                    min_num_obs=DEFAULT_RESAMPLE_CONSTRAINTS
+                    )
         
         #loop over stations in colcated data
-        for site in tqdm.tqdm(sitedata['stats'], desc=var):
-            tst = 'daily'
-            try:
-                site = site.resample_time(
-                    var_name=var,
-                    ts_type=tst,
-                    min_num_obs=DEFAULT_RESAMPLE_CONSTRAINTS,
-                    how=DEFAULT_RESAMPLE_HOW)
-            except pya.exceptions.TemporalResolutionError:
-                tst = 'monthly'
-                try:
-                    site = site.resample_time(
-                    var_name=var,
-                    ts_type=tst,
-                    min_num_obs=DEFAULT_RESAMPLE_CONSTRAINTS,
-                    how=DEFAULT_RESAMPLE_HOW)
-                except pya.exceptions.TemporalResolutionError:
-                    continue
+        sitelist = list(coldata.data.station_name.values)
+        for site in tqdm.tqdm(sitelist, desc=var):
+            tst = 'monthly'
 
-            ts = site[var].loc[start_yr:stop_yr]
-            if len(ts) == 0 or np.isnan(ts).all(): # skip
+            obs_site = coldata.data.sel(station_name=site).isel(data_source=0).to_series()
+            mod_site = coldata.data.sel(station_name=site).isel(data_source=1).to_series()
+            obs_ts = obs_site.loc[start_yr:stop_yr]
+            mod_ts = mod_site.loc[start_yr:stop_yr]
+            if len(obs_ts) == 0 or np.isnan(obs_ts).all(): # skip
                 continue
-            subdir = os.path.join(OUTPUT_DIR, f'data_{var}')
+            obs_subdir = os.path.join(OUTPUT_DIR, f'data_{var}')
+            mod_subdir = os.path.join(MODEL_OUTPUT_DIR, f'data_{var}')
+            
+            sitedata_for_meta = data.to_station_data(site, var, start=int(start_yr)-1, stop=int(stop_yr)+1,
+                                            resample_how=DEFAULT_RESAMPLE_HOW,
+                                            min_num_obs=DEFAULT_RESAMPLE_CONSTRAINTS)
 
-            site_id = site.station_id
-            os.makedirs(subdir, exist_ok=True)
+            site_id = sitedata_for_meta.station_id
+            os.makedirs(obs_subdir, exist_ok=True)
+            os.makedirs(mod_subdir, exist_ok=True)
             fname = f'data_{var}_{site_id}_{tst}.csv'
 
-            siteout = os.path.join(subdir, fname)
-            ts.to_csv(siteout)
-            unit = site.get_unit(var)
+            obs_siteout = os.path.join(obs_subdir, fname)
+            obs_ts.to_csv(obs_siteout)
+            
+            mod_siteout = os.path.join(mod_subdir, fname)
+            mod_ts.to_csv(mod_siteout)
+            
+            unit = sitedata_for_meta.get_unit(var)
             sitemeta.append([var,
                              site_id,
-                             site.station_name,
-                             site.latitude,
-                             site.longitude,
-                             site.altitude,
+                             sitedata_for_meta.station_name,
+                             sitedata_for_meta.latitude,
+                             sitedata_for_meta.longitude,
+                             sitedata_for_meta.altitude,
                              unit,
                              tst,
-                             site.framework,
-                             site.var_info[var]['matrix']
+                             sitedata_for_meta.framework,
+                             sitedata_for_meta.var_info[var]['matrix']
                              ])
             
-            if tst == 'daily':
-                site = site.resample_time(
-                    var_name=var,
-                    ts_type='monthly',
-                    min_num_obs=DEFAULT_RESAMPLE_CONSTRAINTS,
-                    how=DEFAULT_RESAMPLE_HOW)
-                tst = 'monthly'
+            # if tst == 'daily':
+            #     site = site.resample_time(
+            #         var_name=var,
+            #         ts_type='monthly',
+            #         min_num_obs=DEFAULT_RESAMPLE_CONSTRAINTS,
+            #         how=DEFAULT_RESAMPLE_HOW)
+            #     tst = 'monthly'
 
             te = pya.trends_engine.TrendsEngine
 
 
             for (start, stop, min_yrs) in PERIODS:
                 for seas in SEASONS:
-                    trend = te.compute_trend(ts, tst, start, stop, min_yrs,
+                    obs_trend = te.compute_trend(obs_ts, tst, start, stop, min_yrs,
                                              seas)
 
-                    row = [var, site_id, trend['period'], trend['season'],
-                           trend[f'slp_{start}'], trend[f'slp_{start}_err'],
-                           trend[f'reg0_{start}'], trend['m'], trend['m_err'],
-                           trend['n'], trend['pval'], unit]
+                    obs_row = [var, site_id, obs_trend['period'], obs_trend['season'],
+                           obs_trend[f'slp_{start}'], obs_trend[f'slp_{start}_err'],
+                           obs_trend[f'reg0_{start}'], obs_trend['m'], obs_trend['m_err'],
+                           obs_trend['n'], obs_trend['pval'], unit]
 
-                    trendtab.append(row)
+                    obs_trendtab.append(obs_row)
+                    
+                    mod_trend = te.compute_trend(mod_ts, tst, start, stop, min_yrs,
+                                             seas)
+
+                    mod_row = [var, site_id, mod_trend['period'], mod_trend['season'],
+                           mod_trend[f'slp_{start}'], mod_trend[f'slp_{start}_err'],
+                           mod_trend[f'reg0_{start}'], mod_trend['m'], mod_trend['m_err'],
+                           mod_trend['n'], mod_trend['pval'], unit]
+
+                    mod_trendtab.append(mod_row)
                     
                     fname = f'{var}_{site_id}_{start}-{stop}_{seas}_yearly.csv'
                     try:
-                        trend['data'].to_csv(os.path.join(subdir, fname))
+                        obs_trend['data'].to_csv(os.path.join(obs_subdir, fname))
+                        mod_trend['data'].to_csv(os.path.join(mod_subdir, fname))
                     except AttributeError:
                         pass
                     
@@ -196,7 +239,22 @@ if __name__ == '__main__':
 
         metadf.to_csv(metaout)
 
-        trenddf = pd.DataFrame(trendtab,
+        obs_trenddf = pd.DataFrame(obs_trendtab,
+                               columns=['var',
+                                       'station_id',
+                                       'period',
+                                       'season',
+                                       'trend [%/yr]',
+                                       'trend err [%/yr]',
+                                       'yoffs',
+                                       'slope',
+                                       'slope err',
+                                       'num yrs',
+                                       'pval',
+                                       'unit'
+                                       ])
+        
+        mod_trenddf = pd.DataFrame(mod_trendtab,
                                columns=['var',
                                        'station_id',
                                        'period',
@@ -211,9 +269,11 @@ if __name__ == '__main__':
                                        'unit'
                                        ])
 
-        trendout = os.path.join(OUTPUT_DIR, f'trends_{var}.csv')
-
-        trenddf.to_csv(trendout)
+        obs_trendout = os.path.join(OUTPUT_DIR, f'trends_{var}.csv')
+        obs_trenddf.to_csv(obs_trendout)
+        
+        mod_trendout = os.path.join(OUTPUT_DIR, f'trends_{var}.csv')
+        mod_trenddf.to_csv(mod_trendout)
 
 
 
