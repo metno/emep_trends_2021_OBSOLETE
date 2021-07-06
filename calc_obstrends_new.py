@@ -11,9 +11,9 @@ import pandas as pd
 import pyaerocom as pya
 from pyaerocom.trends_helpers import SEASONS
 
-from helper_functions import (delete_outdated_output, clear_obs_output,
+from helper_functions import (delete_outdated_output, clear_output,
                               get_first_last_year)
-from read_mods import (read_model,dummy,not_implemented)
+from read_mods import read_model
 import cube_read_methods as cm
 
 from variables import ALL_EBAS_VARS
@@ -43,9 +43,9 @@ EBAS_VARS = [
             # 'vmrc2h6',
             # 'vmrc2h4',
             # 'concpm25',
-            # 'concpm10',
+             'concpm10',
             # 'concso4',
-            'concNtno3',
+            #'concNtno3',
             # 'concNtnh',
             # 'concNnh3',
             # 'concNnh4',
@@ -69,7 +69,7 @@ EBAS_BASE_FILTERS = dict(set_flags_nan   = True,
                          #data_level      = 2
                            framework       = ['EMEP*', 'ACTRIS*'])
 
-OUTPUT_DIR = 'obs_output'
+OBS_OUTPUT_DIR = 'obs_output'
 MODEL_OUTPUT_DIR = 'mod_output'
 
 EMEP_VAR_INFO = {'concpm10':{'units':'ug m-3','data_freq':'day'},
@@ -97,7 +97,7 @@ if "pc53" in HOSTNAME:
     preface = '/home/hansb'
 else:
     preface = '/'
-       
+
 PATHS = {
 '1999-2016' : f'{preface}/lustre/storeB/project/fou/kl/emep/ModelRuns/2019_REPORTING/TRENDS/',
 '2017'      : f'{preface}/lustre/storeB/project/fou/kl/emep/ModelRuns/2019_REPORTING/EMEP01_L20EC_rv4_33.2017',
@@ -106,8 +106,10 @@ PATHS = {
 }
 
 if __name__ == '__main__':
-    if not os.path.exists(OUTPUT_DIR):
-        os.mkdir(OUTPUT_DIR)
+    if not os.path.exists(OBS_OUTPUT_DIR):
+        os.mkdir(OBS_OUTPUT_DIR)
+    if not os.path.exists(MODEL_OUTPUT_DIR):
+        os.mkdir(MODEL_OUTPUT_DIR)
 
     if os.path.exists(EBAS_LOCAL):
         data_dir = EBAS_LOCAL
@@ -116,10 +118,12 @@ if __name__ == '__main__':
         data_dir = None
 
     # clear outdated output variables
-    delete_outdated_output(OUTPUT_DIR, ALL_EBAS_VARS)
+    delete_outdated_output(OBS_OUTPUT_DIR, ALL_EBAS_VARS)
+    delete_outdated_output(MODEL_OUTPUT_DIR, ALL_EBAS_VARS)
 
     start_yr, stop_yr = get_first_last_year(PERIODS)
-    start_yr = '2015'; stop_yr = '2018'
+    #start_yr = '2015'; stop_yr = '2018'
+    print(start_yr, stop_yr)
 
     oreader = pya.io.ReadUngridded(EBAS_ID, data_dirs=data_dir)
     
@@ -130,7 +134,8 @@ if __name__ == '__main__':
             raise ValueError('invalid variable ', var, '. Please register'
                              'in variables.py')
         # delete former output for that variable if it exists
-        clear_obs_output(OUTPUT_DIR, var)
+        clear_output(OBS_OUTPUT_DIR, var)
+        clear_output(MODEL_OUTPUT_DIR, var)
         sitemeta = []
         obs_trendtab = []
         mod_trendtab = []
@@ -162,7 +167,7 @@ if __name__ == '__main__':
             mod_ts = mod_site.loc[start_yr:stop_yr]
             if len(obs_ts) == 0 or np.isnan(obs_ts).all(): # skip
                 continue
-            obs_subdir = os.path.join(OUTPUT_DIR, f'data_{var}')
+            obs_subdir = os.path.join(OBS_OUTPUT_DIR, f'data_{var}')
             mod_subdir = os.path.join(MODEL_OUTPUT_DIR, f'data_{var}')
             
             sitedata_for_meta = data.to_station_data(site, var, start=int(start_yr)-1, stop=int(stop_yr)+1,
@@ -246,7 +251,7 @@ if __name__ == '__main__':
                                        'matrix'
                                        ])
 
-        metaout = os.path.join(OUTPUT_DIR, f'sitemeta_{var}.csv')
+        metaout = os.path.join(OBS_OUTPUT_DIR, f'sitemeta_{var}.csv')
 
         metadf.to_csv(metaout)
 
@@ -280,15 +285,8 @@ if __name__ == '__main__':
                                        'unit'
                                        ])
 
-        obs_trendout = os.path.join(OUTPUT_DIR, f'trends_{var}.csv')
+        obs_trendout = os.path.join(OBS_OUTPUT_DIR, f'trends_{var}.csv')
         obs_trenddf.to_csv(obs_trendout)
         
-        mod_trendout = os.path.join(OUTPUT_DIR, f'trends_{var}.csv')
+        mod_trendout = os.path.join(MODEL_OUTPUT_DIR, f'trends_{var}.csv')
         mod_trenddf.to_csv(mod_trendout)
-
-
-
-
-
-
-

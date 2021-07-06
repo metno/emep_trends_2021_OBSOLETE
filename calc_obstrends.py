@@ -11,7 +11,7 @@ import pandas as pd
 import pyaerocom as pya
 from pyaerocom.trends_helpers import SEASONS
 
-from helper_functions import (delete_outdated_output, clear_obs_output,
+from helper_functions import (delete_outdated_output, clear_output,
                               get_first_last_year)
 
 from variables import ALL_EBAS_VARS
@@ -90,7 +90,7 @@ if __name__ == '__main__':
             raise ValueError('invalid variable ', var, '. Please register'
                              'in variables.py')
         # delete former output for that variable if it exists
-        clear_obs_output(OUTPUT_DIR, var)
+        clear_output(OUTPUT_DIR, var)
         sitemeta = []
         trendtab = []
 
