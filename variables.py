@@ -33,6 +33,5 @@ ALL_EBAS_VARS = ['concno2',
                  'wetoxn',
                  'pr',
                  'vmrisop',
-                 'concglyoxal',
-                 'conchcho'
+                 'concglyoxal'
                  ]
