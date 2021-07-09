@@ -13,7 +13,7 @@ from pyaerocom.trends_helpers import SEASONS
 
 from helper_functions import (delete_outdated_output, clear_output,
                               get_first_last_year)
-from read_mods import read_model
+from read_mods import read_model, get_modelfile, CALCULATE_HOW, EMEP_VAR_UNITS
 import derive_cubes as der
 
 from variables import ALL_EBAS_VARS
@@ -74,82 +74,7 @@ MODEL_OUTPUT_DIR = 'mod_output'
 #OBS_OUTPUT_DIR = '/home/eivindgw/testdata/obs_output'  #!!!!!! for testing
 #MODEL_OUTPUT_DIR = '/home/eivindgw/testdata/mod_output'  #!!!!!!! for testing
 
-dfreq = 'day'
-EMEP_VAR_INFO = {
-    'concno2': {'units': 'ug m-3', 'data_freq': dfreq},
-    'concso2': {'units': 'ug m-3', 'data_freq': dfreq},
-    'concco': {'units': 'ug m-3', 'data_freq': dfreq},
-    'vmrc2h6': {'units': 'ppb', 'data_freq': dfreq},
-    'vmrc2h4': {'units': 'ppb', 'data_freq': dfreq},
-    'concpm25': {'units': 'ug m-3', 'data_freq': dfreq},
-    'concpm10': {'units': 'ug m-3', 'data_freq': dfreq},
-    # - skipping ozone for now
-    'concso4': {'units': 'ug m-3', 'data_freq': dfreq},
-    'concNtno3': {'units': 'ug N m-3', 'data_freq': dfreq},
-    'concNtnh': {'units': 'ug N m-3', 'data_freq': dfreq},
-    'concNnh3': {'unnits': 'ug N m-3', 'data_freq': dfreq},
-    'concNnh4': {'units': 'ug N m-3', 'data_freq': dfreq},
-    'concNhno3': {'units': 'ug N m-3', 'data_freq': dfreq},
-    'concNno3pm25': {'units': 'ug N m-3', 'data_freq': dfreq},
-    'concNno3pm10': {'units': 'ug N m-3', 'data_freq': dfreq},
-    'concsspm25': {'units': 'ug m-3', 'data_freq': dfreq},
-    'concss': {'units': 'ug m-3', 'data_freq': dfreq},
-    'concCecpm25': {'units': 'ug C m-3', 'data_freq': dfreq},  # not working, lack equivalent variable in pyaerocom with units ug/m3, which is what model gives
-    'concCocpm25': {'units': 'ug C m-3', 'data_freq': dfreq},  # not working, captialization problem in pyaerocom
-    'conchcho': {'units': 'ug m-3', 'data_freq': dfreq},
-    'wetoxs': {'units': 'mg S m-3', 'data_freq': dfreq},  # crashes due to model units "mgS/m2" not accepted by cf_units
-    'wetrdn': {'units': 'mg N m-3', 'data_freq': dfreq},  # crashes due to model units "mgN/m2" not accepted by cf_units
-    'wetoxn': {'units': 'mg N m-3', 'data_freq': dfreq},  # crashes, same reason as wetrdn
-    # - skipping precipiation for now
-    'vmrisop': {'units': 'ppb', 'data_freq': dfreq},
-    'concglyoxal': {'units': 'ug m-3', 'data_freq': dfreq},
-}
-CALCULATE_HOW = {
-    'concNtnh': {'req_vars': ['concnh3', 'concnh4'],
-                 'function': der.calc_concNtnh},
-    'concco': {'req_vars': ['vmrco'],
-               'function': der.conc_from_vmr_STP},
-    'concNtno3': {'req_vars': ['conchno3', 'concno3f', 'concno3c'],
-                  'function': der.calc_concNtno3},
-    'concNnh3': {'req_vars': ['concnh3'],
-                 'function': der.calc_concNnh3},
-    'concNnh4': {'req_vars': ['concnh4'],
-                 'function': der.calc_concNnh4},
-    'concNhno3': {'req_vars': ['conchno3'],
-                  'function': der.calc_concNhno3},
-    'concNno3pm25': {'req_vars': ['concno3f', 'concno3c'],  # NB: fine before coarse!
-                     'function': der.calc_concNno3pm25},
-    'concNno3pm10': {'req_vars': ['concno3f', 'concno3c'],
-                     'function': der.calc_concNno3pm10},
-    'conchcho': {'req_vars': ['vmrhcho'],
-                 'function': der.conc_from_vmr_STP},
-    'concglyoxal': {'req_vars': ['vmrglyoxal'],
-                    'function': der.conc_from_vmr_STP}
-}
-
-HOSTNAME = socket.gethostname()
-
-if "pc53" in HOSTNAME:
-    preface = '/home/hansb'
-else:
-    preface = '/'
-
-
-def get_modelfile(year, data_freq):
-    if year < 2017 and year >= 1999:
-        folder = f'{preface}/lustre/storeB/project/fou/kl/emep/ModelRuns/2019_REPORTING/TRENDS/{year}'
-    elif year == 2017:
-        folder = f'{preface}/lustre/storeB/project/fou/kl/emep/ModelRuns/2019_REPORTING/EMEP01_L20EC_rv4_33.2017'
-    elif year == 2018:
-        folder = f'{preface}/lustre/storeB/project/fou/kl/emep/ModelRuns/2020_REPORTING/EMEP01_rv4_35_2018_emepCRef2'
-    elif year == 2019:
-        folder = f'{preface}/lustre/storeB/project/fou/kl/emep/ModelRuns/2020_REPORTING/EMEP01_rv4_35_2019_tnoCRef2'
-    else:
-        raise ValueError(f'Location of model data for year {year} in not known')
-    if data_freq not in ['hour', 'day', 'month']:
-        raise ValueError('data_freq must be "hour", "day" or "month"')
-    return os.path.join(folder, f'Base_{data_freq}.nc')
-
+DATA_FREQ = 'day'
 
 if __name__ == '__main__':
     if not os.path.exists(OBS_OUTPUT_DIR):
@@ -168,7 +93,7 @@ if __name__ == '__main__':
     delete_outdated_output(MODEL_OUTPUT_DIR, ALL_EBAS_VARS)
 
     start_yr, stop_yr = get_first_last_year(PERIODS)
-    #start_yr = '2015'; stop_yr = '2020'  #!!!!!!!!!! for testing
+    #start_yr = '2015'; stop_yr = '2017'  #!!!!!!!!!! for testing
     print(start_yr, stop_yr)
 
     oreader = pya.io.ReadUngridded(EBAS_ID, data_dirs=data_dir)
@@ -188,7 +113,8 @@ if __name__ == '__main__':
         data = oreader.read(vars_to_retrieve=var)
         data = data.apply_filters(**EBAS_BASE_FILTERS)
         #data = data.apply_filters(station_name='Birkenes II')
-        mdata = read_model(var, get_modelfile, start_yr, stop_yr, EMEP_VAR_INFO, CALCULATE_HOW)
+        var_info = {var: {'units': EMEP_VAR_UNITS[var], 'data_freq': DATA_FREQ}}
+        mdata = read_model(var, get_modelfile, start_yr, stop_yr, var_info, CALCULATE_HOW)
 
         #remove:
         # sitedata = data.to_station_data_all(var, start=int(start_yr)-1, stop=int(stop_yr)+1,
