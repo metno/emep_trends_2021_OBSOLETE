@@ -23,7 +23,7 @@ SEASONS = ['all'] + list(SEASONS)
 EBAS_LOCAL = '/home/jonasg/MyPyaerocom/data/obsdata/EBASMultiColumn/data'
 EBAS_ID = 'EBASMC'
 
-DEFAULT_RESAMPLE_CONSTRAINTS = dict(monthly     =   dict(daily      = 21),
+DEFAULT_RESAMPLE_CONSTRAINTS = dict(monthly     =   dict(daily      = 21, weekly = 3),
                                     daily       =   dict(hourly     = 18))
 
 RELAXED_RESAMPLE_CONSTRAINTS = dict(monthly     =   dict(daily      = 4, weekly = 2),
